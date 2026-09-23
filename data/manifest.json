@@ -1,0 +1,201 @@
+{
+    "schema_version": 1,
+    "normalization_version": 1,
+    "version": "2026.09.23",
+    "previous_version": null,
+    "generated_at": "2026-09-23T14:13:44Z",
+    "lists": {
+        "UNSC": {
+            "title": "UN Consolidated Sanctions",
+            "publisher": "United Nations Security Council",
+            "url": "https://main.un.org/securitycouncil/en/content/un-sc-consolidated-list",
+            "source": {
+                "file": "un-sc-consolidated.xml",
+                "sha256": "39e07e4793a740a067c85b6ba96ba9a63f143ecfbfbbb8b84ffcc6e6d29cffac",
+                "bytes": 2176957,
+                "data_as_of": "2026-09-21",
+                "data_as_of_raw": "2026-09-21T23:00:06.615Z"
+            },
+            "entities": 1011,
+            "rejections": 0,
+            "files": [
+                {
+                    "path": "data/UNSC.ndjson",
+                    "sha256": "762c83d8aaf467db1f59873ba97167b18807fe372020022b80c6d5958d6fdcc7",
+                    "bytes": 2022572
+                }
+            ],
+            "carried_forward_from": null
+        },
+        "SECO": {
+            "title": "Swiss SECO Sanctions/Embargoes",
+            "publisher": "State Secretariat for Economic Affairs",
+            "url": "https://www.seco.admin.ch/seco/en/home/Aussenwirtschaftspolitik_Wirtschaftliche_Zusammenarbeit/Wirtschaftsbeziehungen/exportkontrollen-und-sanktionen/sanktionen-embargos.html",
+            "source": {
+                "file": "seco.xml",
+                "sha256": "02122255f58baed2028cf513bbeffb6330fff781ccf4af9ffe9f336d10e0e7b1",
+                "bytes": 42300406,
+                "data_as_of": "2026-09-04",
+                "data_as_of_raw": "2026-09-04"
+            },
+            "entities": 8667,
+            "rejections": 0,
+            "files": [
+                {
+                    "path": "data/SECO.ndjson",
+                    "sha256": "8af34d57df1db3b20da11bda49fca97260cc8bb873326bf215cdec1de75abb41",
+                    "bytes": 17759706
+                }
+            ],
+            "carried_forward_from": null
+        },
+        "OFAC-SDN": {
+            "title": "OFAC - Specially Designated Nationals (SDN) List",
+            "publisher": "US Department of the Treasury",
+            "url": "https://sanctionslist.ofac.treas.gov/Home/SdnList",
+            "source": {
+                "file": "ofac-sdn.xml",
+                "sha256": "99c672869d7a8642f922f9a3e1c621cf10839535d3ad52675fe72dac6f8d9875",
+                "bytes": 109430333,
+                "data_as_of": "2026-09-18",
+                "data_as_of_raw": "2026-09-18T00:00:00-04:00"
+            },
+            "entities": 19393,
+            "rejections": 0,
+            "files": [
+                {
+                    "path": "data/OFAC-SDN.ndjson",
+                    "sha256": "ba327d2bac44e308c3e29b495afc428d36cec0512522c3f43c09d55956d193c2",
+                    "bytes": 32230976
+                }
+            ],
+            "carried_forward_from": null
+        },
+        "OFAC-CONSOLIDATED": {
+            "title": "OFAC - Consolidated (non-SDN) List",
+            "publisher": "US Department of the Treasury",
+            "url": "https://sanctionslist.ofac.treas.gov/Home/ConsolidatedList",
+            "source": {
+                "file": "ofac-consolidated.xml",
+                "sha256": "b46148c7e99df8fca6cd12373aef69a3b856a7a87638c4f54afd27662b4f5152",
+                "bytes": 3828548,
+                "data_as_of": "2026-09-14",
+                "data_as_of_raw": "2026-09-14T00:00:00"
+            },
+            "entities": 481,
+            "rejections": 0,
+            "files": [
+                {
+                    "path": "data/OFAC-CONSOLIDATED.ndjson",
+                    "sha256": "177f96c675bd149924bb22c77dff850a39c7c3ddee1e9fbb7c304fa16c0f72f5",
+                    "bytes": 1095851
+                }
+            ],
+            "carried_forward_from": null
+        },
+        "THEUKLIST": {
+            "title": "The UK Sanctions List",
+            "publisher": "Foreign, Commonwealth & Development Office",
+            "url": "https://www.gov.uk/government/publications/the-uk-sanctions-list",
+            "source": {
+                "file": "uk-sanction-list.xml",
+                "sha256": "50b83b8202daf366976dd35c9d1e9c24edf6ab73b4063cfef8e95d6cc2f0452f",
+                "bytes": 21777970,
+                "data_as_of": "2026-09-21",
+                "data_as_of_raw": "21/09/2026"
+            },
+            "entities": 6339,
+            "rejections": 1,
+            "files": [
+                {
+                    "path": "data/THEUKLIST.ndjson",
+                    "sha256": "6378edd9963753929059d9b9686ffa0e1525e7a06447636c1486be6c3d85353c",
+                    "bytes": 14227108
+                }
+            ],
+            "carried_forward_from": null
+        },
+        "EU-FINANCIAL-SANCTIONS": {
+            "title": "EU Financial Sanctions",
+            "publisher": "Directorate-General for Financial Stability, Financial Services and Capital Markets Union",
+            "url": "https://data.europa.eu/data/datasets/consolidated-list-of-persons-groups-and-entities-subject-to-eu-financial-sanctions?locale=en",
+            "source": {
+                "file": "eu-financial-sanctions.xml",
+                "sha256": "cd59eccb0278d33181c1d87814236109287c9ea5925502f00acfd2e0fd7fe440",
+                "bytes": 25791425,
+                "data_as_of": "2026-09-22",
+                "data_as_of_raw": "2026-09-22T20:01:34.799+02:00"
+            },
+            "entities": 6241,
+            "rejections": 0,
+            "files": [
+                {
+                    "path": "data/EU-FINANCIAL-SANCTIONS.ndjson",
+                    "sha256": "ec2acb9fcb10a5a5b0d8d937786157e1080702f5192db76d37c0e31a36cb7f12",
+                    "bytes": 13017610
+                }
+            ],
+            "carried_forward_from": null
+        },
+        "DFAT": {
+            "title": "Australian DFAT Sanctions List",
+            "publisher": "Department of Foreign Affairs and Trades",
+            "url": "https://www.dfat.gov.au/international-relations/security/sanctions/consolidated-list",
+            "source": {
+                "file": "dfat.xlsx",
+                "sha256": "75c6f431dea7c225236e719988e6097b6fd3eca76c2c3aee3e6bccfe4cf6e124",
+                "bytes": 1312374,
+                "data_as_of": "2026-09-11",
+                "data_as_of_raw": "Consolidated List - 11_09_2026"
+            },
+            "entities": 3906,
+            "rejections": 0,
+            "files": [
+                {
+                    "path": "data/DFAT.ndjson",
+                    "sha256": "975a11b3dbd7c348248fd2a714f287d7da9244fda38dfebb89365bd541dcbe4d",
+                    "bytes": 6183572
+                }
+            ],
+            "carried_forward_from": null
+        },
+        "CSEMA": {
+            "title": "Canada Special Economic Measures Act Sanctions",
+            "publisher": "Department of Foreign Affairs, Trade and Development",
+            "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+            "source": {
+                "file": "canada-sema-lmes.xml",
+                "sha256": "bf1038a752be7fc17400a2b6e78781b3c925ad2d3cdde08d1bbe053984703eeb",
+                "bytes": 2886866,
+                "data_as_of": null,
+                "data_as_of_raw": null
+            },
+            "entities": 5698,
+            "rejections": 0,
+            "files": [
+                {
+                    "path": "data/CSEMA.ndjson",
+                    "sha256": "e8a826f82c84e24e5b8c68143b0d2d9d5852d5eb1db5cdd408eba14dd5fd15a0",
+                    "bytes": 5931890
+                }
+            ],
+            "carried_forward_from": null
+        }
+    },
+    "delta": null,
+    "changes": {
+        "added": 51736,
+        "changed": 0,
+        "removed": 0
+    },
+    "files": {
+        "data/CSEMA.ndjson": "e8a826f82c84e24e5b8c68143b0d2d9d5852d5eb1db5cdd408eba14dd5fd15a0",
+        "data/DFAT.ndjson": "975a11b3dbd7c348248fd2a714f287d7da9244fda38dfebb89365bd541dcbe4d",
+        "data/EU-FINANCIAL-SANCTIONS.ndjson": "ec2acb9fcb10a5a5b0d8d937786157e1080702f5192db76d37c0e31a36cb7f12",
+        "data/OFAC-CONSOLIDATED.ndjson": "177f96c675bd149924bb22c77dff850a39c7c3ddee1e9fbb7c304fa16c0f72f5",
+        "data/OFAC-SDN.ndjson": "ba327d2bac44e308c3e29b495afc428d36cec0512522c3f43c09d55956d193c2",
+        "data/SECO.ndjson": "8af34d57df1db3b20da11bda49fca97260cc8bb873326bf215cdec1de75abb41",
+        "data/THEUKLIST.ndjson": "6378edd9963753929059d9b9686ffa0e1525e7a06447636c1486be6c3d85353c",
+        "data/UNSC.ndjson": "762c83d8aaf467db1f59873ba97167b18807fe372020022b80c6d5958d6fdcc7"
+    }
+}
