@@ -1,0 +1,3 @@
+* text=auto eol=lf
+*.ndjson text eol=lf linguist-generated
+*.json text eol=lf
