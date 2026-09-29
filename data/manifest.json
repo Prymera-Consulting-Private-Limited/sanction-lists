@@ -1,9 +1,9 @@
 {
     "schema_version": 1,
     "normalization_version": 1,
-    "version": "2026.09.25",
-    "previous_version": "2026.09.23",
-    "generated_at": "2026-09-25T20:32:07Z",
+    "version": "2026.09.29",
+    "previous_version": "2026.09.25",
+    "generated_at": "2026-09-29T01:39:45Z",
     "lists": {
         "UNSC": {
             "title": "UN Consolidated Sanctions",
@@ -11,18 +11,18 @@
             "url": "https://main.un.org/securitycouncil/en/content/un-sc-consolidated-list",
             "source": {
                 "file": "un-sc-consolidated.xml",
-                "sha256": "5299585985fe300d4d4fe3754afb4c305cadfc4c1a83c4e7d593b18a62189bcc",
-                "bytes": 2176957,
-                "data_as_of": "2026-09-24",
-                "data_as_of_raw": "2026-09-24T23:00:03.554Z"
+                "sha256": "af812e39a32fb4d146a4dd91a2467e9647565c17b04fa3be350fe807da1dde43",
+                "bytes": 2187321,
+                "data_as_of": "2026-09-28",
+                "data_as_of_raw": "2026-09-28T23:00:01.985Z"
             },
             "entities": 1011,
             "rejections": 0,
             "files": [
                 {
                     "path": "data/UNSC.ndjson",
-                    "sha256": "762c83d8aaf467db1f59873ba97167b18807fe372020022b80c6d5958d6fdcc7",
-                    "bytes": 2022572
+                    "sha256": "e44b17d3b1d04347ea554c018be506de8e8e627c68805faea79666ba66a6039b",
+                    "bytes": 2025962
                 }
             ],
             "carried_forward_from": null
@@ -183,17 +183,17 @@
         }
     },
     "delta": {
-        "path": "deltas/2026.09.25.ndjson",
-        "sha256": "586fcf1e7afc8951b95ee9dc6e8de02bb653645257782cc9130ef6080f621f79",
-        "bytes": 168267,
-        "added": 116,
-        "changed": 3,
-        "removed": 4
+        "path": "deltas/2026.09.29.ndjson",
+        "sha256": "969a80a1e0b340a6021dce891822e024d3154bbbfaa7ebbfd9575aa140fda34c",
+        "bytes": 210866,
+        "added": 0,
+        "changed": 79,
+        "removed": 0
     },
     "changes": {
-        "added": 116,
-        "changed": 3,
-        "removed": 4
+        "added": 0,
+        "changed": 79,
+        "removed": 0
     },
     "files": {
         "data/CSEMA.ndjson": "2a57489acf39c079c6e51f894e08c68fcf5cbb1979cbe251a713d2cffb4952eb",
@@ -203,7 +203,8 @@
         "data/OFAC-SDN.ndjson": "6213079a95e6779559bd29375ce97aa4cbe156f2220dd6d97ac7a575726a714c",
         "data/SECO.ndjson": "8af34d57df1db3b20da11bda49fca97260cc8bb873326bf215cdec1de75abb41",
         "data/THEUKLIST.ndjson": "6378edd9963753929059d9b9686ffa0e1525e7a06447636c1486be6c3d85353c",
-        "data/UNSC.ndjson": "762c83d8aaf467db1f59873ba97167b18807fe372020022b80c6d5958d6fdcc7",
-        "deltas/2026.09.25.ndjson": "586fcf1e7afc8951b95ee9dc6e8de02bb653645257782cc9130ef6080f621f79"
+        "data/UNSC.ndjson": "e44b17d3b1d04347ea554c018be506de8e8e627c68805faea79666ba66a6039b",
+        "deltas/2026.09.25.ndjson": "586fcf1e7afc8951b95ee9dc6e8de02bb653645257782cc9130ef6080f621f79",
+        "deltas/2026.09.29.ndjson": "969a80a1e0b340a6021dce891822e024d3154bbbfaa7ebbfd9575aa140fda34c"
     }
 }

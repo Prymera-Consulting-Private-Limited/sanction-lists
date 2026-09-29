@@ -6,11 +6,12 @@ Schema version 1. Name normalisation version 1.
 
 | File | What it is |
 | --- | --- |
-| `latest.json` | The current version: `version`, `tag`, `previous_version`, `generated_at`, `manifest_sha256`. |
+| `latest.json` | The current version: `version`, `tag`, `previous_version`, `generated_at`, `checked_at`, `manifest_sha256`. |
 | `versions.json` | Every version in order, oldest first, each with its delta's path, sha256 and counts. |
 | `data/manifest.json` | For one version: per list, the source file it was built from (name, sha256, size, the publisher's "data as of" date), the number of entries, the number of rejected records, the data files with their sha256, and `carried_forward_from` when the list was not rebuilt in this version. `files` maps every data and delta file to its sha256. |
 | `data/<CODE>.ndjson` | The full current snapshot of one list, one entry per line, ordered by `id`. |
 | `deltas/<version>.ndjson` | What changed in that version, one operation per line, ordered by list then `id`. |
+| `latest.json.sig`, `data/manifest.json.sig` | The publisher's signatures of `latest.json` and of the manifest. See Signatures. |
 
 Every file uses LF line endings and every NDJSON file ends with a newline.
 
@@ -29,11 +30,47 @@ To stay current, a consumer reads `latest.json` and then either:
 A full load should remove entries the snapshot no longer contains. After applying a
 delta chain, the consumer holds exactly what a full load of the last version gives.
 
+A version is published only when something changed. `checked_at` in `latest.json`
+is when every source was last read, whether or not that produced a version: on a
+day when nothing changed it moves forward and the version stays the same. A consumer
+can tell a quiet week from a dataset nobody is maintaining by its age. Versions
+published before `checked_at` existed lack it; read `generated_at` in its place.
+
 Some versions have no delta: the first one (there is nothing to compare it with),
 and any whose delta would be too large to publish (every entry changed at once).
 Their `delta` is null in `versions.json` and in the manifest, and `changes` still
 gives the counts. A chain that crosses such a version cannot be applied; load the
 full snapshot instead.
+
+## Signatures
+
+From the first version published after 2026-09-26, `latest.json` and
+`data/manifest.json` each have a detached Ed25519 signature beside them, in a file
+of the same name ending `.sig`:
+
+```json
+{
+    "algorithm": "ed25519",
+    "key_id": "<first 16 hex characters of the sha256 of the raw 32-byte public key>",
+    "signature": "<base64 of the 64-byte signature>"
+}
+```
+
+The signature is over the file's exact bytes as fetched, with no canonicalisation.
+The manifest lists the sha256 of every data and delta file, so one verified manifest
+vouches for the whole version. To verify:
+
+1. Fetch the file and its `.sig` from the same ref (the tag for a manifest, `main`
+   for `latest.json`).
+2. Look up `key_id` among the public keys listed in `README.md`. Refuse an unknown key.
+3. Verify the signature over the bytes you fetched, and only then parse them. For
+   example, in PHP: `sodium_crypto_sign_verify_detached($signature, $bytes, $publicKey)`;
+   in Python with PyNaCl: `VerifyKey(public_key).verify(bytes, signature)`.
+4. Check that the manifest's `version` is the version you asked for, then check each
+   file you download against the manifest's sha256.
+
+`latest.json` is signed again every day, when `checked_at` moves. Versions published
+before signing began have no `.sig` files.
 
 ## Entry
 
