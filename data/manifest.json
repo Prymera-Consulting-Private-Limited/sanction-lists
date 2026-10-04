@@ -1,9 +1,9 @@
 {
     "schema_version": 1,
     "normalization_version": 1,
-    "version": "2026.10.03",
-    "previous_version": "2026.09.29",
-    "generated_at": "2026-10-03T01:02:51Z",
+    "version": "2026.10.04",
+    "previous_version": "2026.10.03",
+    "generated_at": "2026-10-04T00:25:55Z",
     "lists": {
         "UNSC": {
             "title": "UN Consolidated Sanctions",
@@ -11,10 +11,10 @@
             "url": "https://main.un.org/securitycouncil/en/content/un-sc-consolidated-list",
             "source": {
                 "file": "un-sc-consolidated.xml",
-                "sha256": "80119f94467cfcbb750c6e33145633f873d239b6f8b99ddfe04daa4962d22a48",
+                "sha256": "a749134d9922094123b40e3d9479965a867fc95dbe336d96c587dd0e967ba9c7",
                 "bytes": 2187322,
-                "data_as_of": "2026-10-02",
-                "data_as_of_raw": "2026-10-02T23:00:05.487Z"
+                "data_as_of": "2026-10-03",
+                "data_as_of_raw": "2026-10-03T23:00:03.428Z"
             },
             "entities": 1011,
             "rejections": 0,
@@ -143,18 +143,18 @@
             "url": "https://www.dfat.gov.au/international-relations/security/sanctions/consolidated-list",
             "source": {
                 "file": "dfat.xlsx",
-                "sha256": "70c5f44dbbffb5bec13e526c13a87fc4f911d130ab700cf8ad4ba872b059476b",
-                "bytes": 1377402,
+                "sha256": "0936243df3269ba127709353bc0f26128f7268cbee4133e64cbbb81311def679",
+                "bytes": 1342232,
                 "data_as_of": null,
-                "data_as_of_raw": "Consolidated List"
+                "data_as_of_raw": "Consolidated List - 2_10_2026"
             },
             "entities": 4010,
             "rejections": 0,
             "files": [
                 {
                     "path": "data/DFAT.ndjson",
-                    "sha256": "ccf34f75fa9166544d2a0205edd2a9fb1087eac7ed0adf5fbc2f4feb1adbc9b1",
-                    "bytes": 6325767
+                    "sha256": "5b404d80a80cc867490d5aafd4b011b9f140d9a1afee40ed360ef5a794f7f52e",
+                    "bytes": 6321363
                 }
             ],
             "carried_forward_from": null
@@ -183,21 +183,21 @@
         }
     },
     "delta": {
-        "path": "deltas/2026.10.03.ndjson",
-        "sha256": "7759f26451c5ab8829fcdb3c8c87952f2134f0c5c7a35805c93c730a60c0df37",
-        "bytes": 301863,
-        "added": 132,
-        "changed": 20,
-        "removed": 5
+        "path": "deltas/2026.10.04.ndjson",
+        "sha256": "7a2cd0d72bba31cf69c981dc4f50d47b5a87fc57d7f32e9c8c502f8789944e98",
+        "bytes": 37267,
+        "added": 0,
+        "changed": 16,
+        "removed": 0
     },
     "changes": {
-        "added": 132,
-        "changed": 20,
-        "removed": 5
+        "added": 0,
+        "changed": 16,
+        "removed": 0
     },
     "files": {
         "data/CSEMA.ndjson": "2e9ed1c8ac0b0e069c6ab74a4e3d2588591b9154abff3f2400667ca59884c636",
-        "data/DFAT.ndjson": "ccf34f75fa9166544d2a0205edd2a9fb1087eac7ed0adf5fbc2f4feb1adbc9b1",
+        "data/DFAT.ndjson": "5b404d80a80cc867490d5aafd4b011b9f140d9a1afee40ed360ef5a794f7f52e",
         "data/EU-FINANCIAL-SANCTIONS.ndjson": "ec2acb9fcb10a5a5b0d8d937786157e1080702f5192db76d37c0e31a36cb7f12",
         "data/OFAC-CONSOLIDATED.ndjson": "177f96c675bd149924bb22c77dff850a39c7c3ddee1e9fbb7c304fa16c0f72f5",
         "data/OFAC-SDN.ndjson": "a8814a408d510b4f87802825dd0530904f52e801424573040cb39affd48ac491",
@@ -206,6 +206,7 @@
         "data/UNSC.ndjson": "6433bc87a123b3aaefdd863e87e29fc9436b5d85bb92fde6897afdbb437eac7c",
         "deltas/2026.09.25.ndjson": "586fcf1e7afc8951b95ee9dc6e8de02bb653645257782cc9130ef6080f621f79",
         "deltas/2026.09.29.ndjson": "969a80a1e0b340a6021dce891822e024d3154bbbfaa7ebbfd9575aa140fda34c",
-        "deltas/2026.10.03.ndjson": "7759f26451c5ab8829fcdb3c8c87952f2134f0c5c7a35805c93c730a60c0df37"
+        "deltas/2026.10.03.ndjson": "7759f26451c5ab8829fcdb3c8c87952f2134f0c5c7a35805c93c730a60c0df37",
+        "deltas/2026.10.04.ndjson": "7a2cd0d72bba31cf69c981dc4f50d47b5a87fc57d7f32e9c8c502f8789944e98"
     }
 }

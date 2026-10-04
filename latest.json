@@ -1,9 +1,9 @@
 {
     "schema_version": 1,
-    "version": "2026.10.03",
-    "tag": "v2026.10.03",
-    "previous_version": "2026.09.29",
-    "generated_at": "2026-10-03T01:02:51Z",
-    "checked_at": "2026-10-03T01:02:51Z",
-    "manifest_sha256": "c4ec20b6b66fbe8ef81584d12a9e9ae557973e668195a3d9f1f41759e10ac1b2"
+    "version": "2026.10.04",
+    "tag": "v2026.10.04",
+    "previous_version": "2026.10.03",
+    "generated_at": "2026-10-04T00:25:55Z",
+    "checked_at": "2026-10-04T00:25:55Z",
+    "manifest_sha256": "000e318ac674af6a35657e05c98b1930c3116e7dfce6b74c199d76dee038e41f"
 }
