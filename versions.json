@@ -75,5 +75,19 @@
             "changed": 22,
             "removed": 125
         }
+    },
+    {
+        "version": "2026.10.07",
+        "tag": "v2026.10.07",
+        "previous_version": "2026.10.06",
+        "generated_at": "2026-10-07T01:19:25Z",
+        "delta": {
+            "path": "deltas/2026.10.07.ndjson",
+            "sha256": "4e7136602f9cbe333067ac675142722b708fe59748b244d5a88abce53307ff50",
+            "bytes": 7066,
+            "added": 0,
+            "changed": 3,
+            "removed": 2
+        }
     }
 ]
