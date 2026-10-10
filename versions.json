@@ -117,5 +117,19 @@
             "changed": 11,
             "removed": 2
         }
+    },
+    {
+        "version": "2026.10.10",
+        "tag": "v2026.10.10",
+        "previous_version": "2026.10.09",
+        "generated_at": "2026-10-10T01:36:03Z",
+        "delta": {
+            "path": "deltas/2026.10.10.ndjson",
+            "sha256": "1b2c74ed179c577fbd6ae2d5d22fa1de4652b77973c66552b0f0f3ad550e9bbf",
+            "bytes": 1442,
+            "added": 1,
+            "changed": 0,
+            "removed": 1
+        }
     }
 ]
