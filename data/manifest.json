@@ -1,9 +1,9 @@
 {
     "schema_version": 1,
     "normalization_version": 1,
-    "version": "2026.10.10",
-    "previous_version": "2026.10.09",
-    "generated_at": "2026-10-10T01:36:03Z",
+    "version": "2026.10.13",
+    "previous_version": "2026.10.10",
+    "generated_at": "2026-10-13T02:56:20Z",
     "lists": {
         "UNSC": {
             "title": "UN Consolidated Sanctions",
@@ -11,10 +11,10 @@
             "url": "https://main.un.org/securitycouncil/en/content/un-sc-consolidated-list",
             "source": {
                 "file": "un-sc-consolidated.xml",
-                "sha256": "0872bef700f1d4d78e9296ce456d4a877c3027bc5983ffd95bc429119c3b6db7",
+                "sha256": "327bb5670b64c6d5137b114e263ca9b7caa973d3039e3b1ff83bbd2dea017853",
                 "bytes": 2186496,
-                "data_as_of": "2026-10-09",
-                "data_as_of_raw": "2026-10-09T23:00:05.576Z"
+                "data_as_of": "2026-10-12",
+                "data_as_of_raw": "2026-10-12T23:00:04.896Z"
             },
             "entities": 1010,
             "rejections": 0,
@@ -99,18 +99,18 @@
             "url": "https://www.gov.uk/government/publications/the-uk-sanctions-list",
             "source": {
                 "file": "uk-sanction-list.xml",
-                "sha256": "7fb09d578c0dadcc392eb498e336d0dbc1abf48999386b08dd74a5d5809645dc",
-                "bytes": 22045155,
-                "data_as_of": "2026-10-08",
-                "data_as_of_raw": "08/10/2026"
+                "sha256": "067e24eed2e973175f40e9c477fed83bbbfda160c72d6ea5629791cbd700ca72",
+                "bytes": 22051190,
+                "data_as_of": "2026-10-12",
+                "data_as_of_raw": "12/10/2026"
             },
-            "entities": 6406,
+            "entities": 6408,
             "rejections": 1,
             "files": [
                 {
                     "path": "data/THEUKLIST.ndjson",
-                    "sha256": "38cfce272847c3aa4e29f0ff4966180260f2f8dace6b1d9da38df27291fcf19e",
-                    "bytes": 14408250
+                    "sha256": "b8920a7893ad308544245ae5a7c84fcf9c59322d1c2eef2b2376be11e654946c",
+                    "bytes": 14411989
                 }
             ],
             "carried_forward_from": null
@@ -121,18 +121,18 @@
             "url": "https://data.europa.eu/data/datasets/consolidated-list-of-persons-groups-and-entities-subject-to-eu-financial-sanctions?locale=en",
             "source": {
                 "file": "eu-financial-sanctions.xml",
-                "sha256": "cd59eccb0278d33181c1d87814236109287c9ea5925502f00acfd2e0fd7fe440",
-                "bytes": 25791425,
-                "data_as_of": "2026-09-22",
-                "data_as_of_raw": "2026-09-22T20:01:34.799+02:00"
+                "sha256": "ea1ca08a57230ffbf003b0c55d93c617b926dc4ed4e877bf8a2a6fdaed175644",
+                "bytes": 25761082,
+                "data_as_of": "2026-10-12",
+                "data_as_of_raw": "2026-10-12T12:27:34.779+02:00"
             },
-            "entities": 6241,
+            "entities": 6233,
             "rejections": 0,
             "files": [
                 {
                     "path": "data/EU-FINANCIAL-SANCTIONS.ndjson",
-                    "sha256": "ec2acb9fcb10a5a5b0d8d937786157e1080702f5192db76d37c0e31a36cb7f12",
-                    "bytes": 13017610
+                    "sha256": "9f2176c81cd7c4d253d27fa16feee8fda3f7ad8e7ea9a4f7156fa6538a2e7fd6",
+                    "bytes": 13002256
                 }
             ],
             "carried_forward_from": null
@@ -183,26 +183,26 @@
         }
     },
     "delta": {
-        "path": "deltas/2026.10.10.ndjson",
-        "sha256": "1b2c74ed179c577fbd6ae2d5d22fa1de4652b77973c66552b0f0f3ad550e9bbf",
-        "bytes": 1442,
-        "added": 1,
-        "changed": 0,
-        "removed": 1
+        "path": "deltas/2026.10.13.ndjson",
+        "sha256": "9ec800035d6d43d11d809921c597e92cb285b66fae24ce8a7814154ab606cfc7",
+        "bytes": 3273494,
+        "added": 2,
+        "changed": 1319,
+        "removed": 8
     },
     "changes": {
-        "added": 1,
-        "changed": 0,
-        "removed": 1
+        "added": 2,
+        "changed": 1319,
+        "removed": 8
     },
     "files": {
         "data/CSEMA.ndjson": "2e9ed1c8ac0b0e069c6ab74a4e3d2588591b9154abff3f2400667ca59884c636",
         "data/DFAT.ndjson": "6980c504c4a25b707d4951a42dc222c80ca330d93a644f962203a7d20d45c65a",
-        "data/EU-FINANCIAL-SANCTIONS.ndjson": "ec2acb9fcb10a5a5b0d8d937786157e1080702f5192db76d37c0e31a36cb7f12",
+        "data/EU-FINANCIAL-SANCTIONS.ndjson": "9f2176c81cd7c4d253d27fa16feee8fda3f7ad8e7ea9a4f7156fa6538a2e7fd6",
         "data/OFAC-CONSOLIDATED.ndjson": "177f96c675bd149924bb22c77dff850a39c7c3ddee1e9fbb7c304fa16c0f72f5",
         "data/OFAC-SDN.ndjson": "f8e2a36c4c1d0bbad7ac7fbc89fc09cd22a7d28a6133b935a024d85feaf3b3fd",
         "data/SECO.ndjson": "b67fb84134d4641a56b7586b844fcbca37a2bc32986d005c57bb5ea002e5aadc",
-        "data/THEUKLIST.ndjson": "38cfce272847c3aa4e29f0ff4966180260f2f8dace6b1d9da38df27291fcf19e",
+        "data/THEUKLIST.ndjson": "b8920a7893ad308544245ae5a7c84fcf9c59322d1c2eef2b2376be11e654946c",
         "data/UNSC.ndjson": "378f44f44d35e2d2affa04f739a7c14505011e5a8b2fe16cc31a701b73bd24c1",
         "deltas/2026.09.25.ndjson": "586fcf1e7afc8951b95ee9dc6e8de02bb653645257782cc9130ef6080f621f79",
         "deltas/2026.09.29.ndjson": "969a80a1e0b340a6021dce891822e024d3154bbbfaa7ebbfd9575aa140fda34c",
@@ -212,6 +212,7 @@
         "deltas/2026.10.07.ndjson": "4e7136602f9cbe333067ac675142722b708fe59748b244d5a88abce53307ff50",
         "deltas/2026.10.08.ndjson": "13693060887a4003cee47c442897c804a28838f3c13585774158ab7dfbcaf020",
         "deltas/2026.10.09.ndjson": "a9ae32d1ff37f15b8a145467a6c7bc6a49d6d3d4baf8ac94e631e4ce05cfb26d",
-        "deltas/2026.10.10.ndjson": "1b2c74ed179c577fbd6ae2d5d22fa1de4652b77973c66552b0f0f3ad550e9bbf"
+        "deltas/2026.10.10.ndjson": "1b2c74ed179c577fbd6ae2d5d22fa1de4652b77973c66552b0f0f3ad550e9bbf",
+        "deltas/2026.10.13.ndjson": "9ec800035d6d43d11d809921c597e92cb285b66fae24ce8a7814154ab606cfc7"
     }
 }

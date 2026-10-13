@@ -131,5 +131,19 @@
             "changed": 0,
             "removed": 1
         }
+    },
+    {
+        "version": "2026.10.13",
+        "tag": "v2026.10.13",
+        "previous_version": "2026.10.10",
+        "generated_at": "2026-10-13T02:56:20Z",
+        "delta": {
+            "path": "deltas/2026.10.13.ndjson",
+            "sha256": "9ec800035d6d43d11d809921c597e92cb285b66fae24ce8a7814154ab606cfc7",
+            "bytes": 3273494,
+            "added": 2,
+            "changed": 1319,
+            "removed": 8
+        }
     }
 ]
