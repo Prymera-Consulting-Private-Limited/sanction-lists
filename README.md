@@ -39,6 +39,16 @@ built from (its sha256 and the publisher's own "data as of" date).
 Versions are dated `YYYY.MM.DD`, with `.2`, `.3` for a second or third publish
 on the same day. The record format is described in `SCHEMA.md`.
 
+## Signatures
+
+`latest.json` and `data/manifest.json` are signed with Ed25519, in `.sig` files
+beside them. `SCHEMA.md`, under Signatures, says how to verify one. These are the
+keys the publisher signs with; refuse a signature whose `key_id` is not here.
+
+| Key id | Public key (base64 of the raw 32 bytes) |
+| --- | --- |
+| `85fd1ac289ebfbd4` | `dWNDSsIQNXQ4PHsoG1E8gB9lCQwrsR04KjbfqogwRKc=` |
+
 ## Licence
 
 Remitso's compilation and normalisation are licensed under

@@ -27,6 +27,11 @@ To stay current, a consumer reads `latest.json` and then either:
 - applies, in order, the `deltas/<version>.ndjson` of every version after the one it
   holds, taking the chain from `versions.json`.
 
+`versions.json` is not signed. Before applying a chain, check it against the signed
+manifests: each version's manifest, fetched and verified at its own tag, must name
+the version before it as `previous_version`. If any does not, load the full snapshot
+of the latest version instead.
+
 A full load should remove entries the snapshot no longer contains. After applying a
 delta chain, the consumer holds exactly what a full load of the last version gives.
 
@@ -66,8 +71,11 @@ vouches for the whole version. To verify:
 3. Verify the signature over the bytes you fetched, and only then parse them. For
    example, in PHP: `sodium_crypto_sign_verify_detached($signature, $bytes, $publicKey)`;
    in Python with PyNaCl: `VerifyKey(public_key).verify(bytes, signature)`.
-4. Check that the manifest's `version` is the version you asked for, then check each
-   file you download against the manifest's sha256.
+4. Check that the manifest's `version` is the version you asked for. For the latest
+   version, also check that the manifest's sha256 is the `manifest_sha256` in
+   `latest.json`. Then check each file you download against the manifest's sha256.
+5. Refuse a file with no `.sig` beside it, unless you load a version published
+   before signing began. Every version since 2026.09.29 is signed.
 
 `latest.json` is signed again every day, when `checked_at` moves. Versions published
 before signing began have no `.sig` files.
