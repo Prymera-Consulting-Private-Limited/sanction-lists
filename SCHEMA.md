@@ -6,7 +6,7 @@ Schema version 1. Name normalisation version 1.
 
 | File | What it is |
 | --- | --- |
-| `latest.json` | The current version: `version`, `tag`, `previous_version`, `generated_at`, `checked_at`, `manifest_sha256`. |
+| `latest.json` | The current version: `version`, `tag`, `previous_version`, `generated_at`, `checked_at`, `manifest_sha256`, and `sources`, how fresh each list is (see Freshness). |
 | `versions.json` | Every version in order, oldest first, each with its delta's path, sha256 and counts. |
 | `data/manifest.json` | For one version: per list, the source file it was built from (name, sha256, size, the publisher's "data as of" date), the number of entries, the number of rejected records, the data files with their sha256, and `carried_forward_from` when the list was not rebuilt in this version. `files` maps every data and delta file to its sha256. |
 | `data/<CODE>.ndjson` | The full current snapshot of one list, one entry per line, ordered by `id`. |
@@ -40,6 +40,28 @@ is when every source was last read, whether or not that produced a version: on a
 day when nothing changed it moves forward and the version stays the same. A consumer
 can tell a quiet week from a dataset nobody is maintaining by its age. Versions
 published before `checked_at` existed lack it; read `generated_at` in its place.
+
+## Freshness
+
+A dataset checked today can still hold a list whose publisher stopped updating it.
+`sources` in `latest.json` says, per list code:
+
+| Field | What it is |
+| --- | --- |
+| `checked_at` | When the list was last read. A partial publish that did not read it leaves the earlier value. |
+| `data_as_of` | The publisher's own date for its file, as last read (`YYYY-MM-DD`), or null when the file carried none. It can move on a day with no new version, when a publisher re-dates an unchanged file. |
+| `last_changed_in` | The version that last changed the list's entries. |
+| `max_data_age_days` | How old `data_as_of` may get before the list should count as stale. Null for a list whose publisher dates nothing. |
+| `max_unchanged_days` | For a list with no date: how long it may go unchanged before a warning. Undated lists are often quiet for long stretches, so this is a warning, not a fault. |
+
+The limits are the publisher's judgement of each list's usual pace. The block
+carries no verdict: a status worked out at publish time would itself be stale by
+the time you read it, so judge each list against your own clock. DFAT's date is
+when its workbook was saved, because its sheet title often carries none.
+
+A version is never published from a file dated earlier than the one it replaces,
+unless a person has checked and accepted it. Versions published before `sources`
+existed lack it.
 
 Some versions have no delta: the first one (there is nothing to compare it with),
 and any whose delta would be too large to publish (every entry changed at once).
