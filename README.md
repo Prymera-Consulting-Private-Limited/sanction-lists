@@ -47,7 +47,6 @@ keys the publisher signs with; refuse a signature whose `key_id` is not here.
 
 | Key id | Public key (base64 of the raw 32 bytes) |
 | --- | --- |
-| `85fd1ac289ebfbd4` | `dWNDSsIQNXQ4PHsoG1E8gB9lCQwrsR04KjbfqogwRKc=` |
 | `08e25c1704f9f816` | `yG9Ko8VIceGlAVQw6CDdByDkA5SfbYumLbEy5puAnGY=` |
 
 ## Licence
