@@ -1,9 +1,9 @@
 {
     "schema_version": 1,
     "normalization_version": 1,
-    "version": "2026.10.23",
-    "previous_version": "2026.10.22",
-    "generated_at": "2026-10-23T00:29:55Z",
+    "version": "2026.10.24",
+    "previous_version": "2026.10.23",
+    "generated_at": "2026-10-24T00:25:09Z",
     "lists": {
         "UNSC": {
             "title": "UN Consolidated Sanctions",
@@ -11,10 +11,10 @@
             "url": "https://main.un.org/securitycouncil/en/content/un-sc-consolidated-list",
             "source": {
                 "file": "un-sc-consolidated.xml",
-                "sha256": "a52a47a62939482afdba2ec2becb86c88a5d6a93875665b4c8f11e99cda1d2a4",
+                "sha256": "4db1d47ec66de183a435912848f6c8c68b01aeb396f493ac5a529cadedbada51",
                 "bytes": 2185396,
-                "data_as_of": "2026-10-22",
-                "data_as_of_raw": "2026-10-22T23:00:06.809Z"
+                "data_as_of": "2026-10-23",
+                "data_as_of_raw": "2026-10-23T23:00:02.379Z"
             },
             "entities": 1010,
             "rejections": 0,
@@ -121,18 +121,18 @@
             "url": "https://data.europa.eu/data/datasets/consolidated-list-of-persons-groups-and-entities-subject-to-eu-financial-sanctions?locale=en",
             "source": {
                 "file": "eu-financial-sanctions.xml",
-                "sha256": "7d21a5c7574eae8192ce15dcd02f53b7e81b05d01d4d3f2b2eb903f3aec8f400",
-                "bytes": 25767041,
-                "data_as_of": "2026-10-15",
-                "data_as_of_raw": "2026-10-15T12:10:34.160+02:00"
+                "sha256": "636800c3e494b2ef8934f51f5e23c914a6208a383ac850e674b1b35a7d49d34f",
+                "bytes": 25899600,
+                "data_as_of": "2026-10-23",
+                "data_as_of_raw": "2026-10-23T17:05:43.888+02:00"
             },
-            "entities": 6234,
+            "entities": 6269,
             "rejections": 0,
             "files": [
                 {
                     "path": "data/EU-FINANCIAL-SANCTIONS.ndjson",
-                    "sha256": "23e794d89d5746d93a5e2df8ca8cee1bb6e99e9d415523d5c148a6bcb222492f",
-                    "bytes": 13005036
+                    "sha256": "f5f7de21bd6dcbff37a4dec8a1ae8759fcd29b36e56be2fab8dd16e552aa2338",
+                    "bytes": 13065609
                 }
             ],
             "carried_forward_from": null
@@ -183,22 +183,22 @@
         }
     },
     "delta": {
-        "path": "deltas/2026.10.23.ndjson",
-        "sha256": "f49cf3e04d5a106abafa8565680775c33eb5ce6d299d734d5318a350949d3c33",
-        "bytes": 6335,
-        "added": 4,
-        "changed": 0,
-        "removed": 0
+        "path": "deltas/2026.10.24.ndjson",
+        "sha256": "d843ef5558ca6597d9dd8828e88f3b0492c52e777866bfa25361aef6d3bb6a5d",
+        "bytes": 4080550,
+        "added": 36,
+        "changed": 1456,
+        "removed": 1
     },
     "changes": {
-        "added": 4,
-        "changed": 0,
-        "removed": 0
+        "added": 36,
+        "changed": 1456,
+        "removed": 1
     },
     "files": {
         "data/CSEMA.ndjson": "de1392f20e483b3643c543f0e7b908d6dea554601b111f4af9d240526845c5ce",
         "data/DFAT.ndjson": "1802d3e7400f6f6574a5bd48750b7f05c05737b6c75d61621e1262cdcb04ff5e",
-        "data/EU-FINANCIAL-SANCTIONS.ndjson": "23e794d89d5746d93a5e2df8ca8cee1bb6e99e9d415523d5c148a6bcb222492f",
+        "data/EU-FINANCIAL-SANCTIONS.ndjson": "f5f7de21bd6dcbff37a4dec8a1ae8759fcd29b36e56be2fab8dd16e552aa2338",
         "data/OFAC-CONSOLIDATED.ndjson": "21dbd43463d50fa3467339d3e79540d1817a25b009f46798f7c6dc4daba8814a",
         "data/OFAC-SDN.ndjson": "5157fc28fff08de437390f76da9cc20bb10c7cf150affc8bce1570cac5eb92cb",
         "data/SECO.ndjson": "a5468f7c20c2f02232ac6ac05479bdd1ea73045756e126168b4d9ecd33bf7fe1",
@@ -219,6 +219,7 @@
         "deltas/2026.10.17.ndjson": "3398fc4d35b57455f2c70d4edb990541e7e6a77c84621240d7fb4b28f0570d58",
         "deltas/2026.10.20.ndjson": "63612074876e0cb3c083e46f5a6ef23fb36be1335ae297ccd2e23039e8ef4e25",
         "deltas/2026.10.22.ndjson": "018d22e6818a7128e99b011acd0af139759b2b73b78b2539e8ffbf923043196d",
-        "deltas/2026.10.23.ndjson": "f49cf3e04d5a106abafa8565680775c33eb5ce6d299d734d5318a350949d3c33"
+        "deltas/2026.10.23.ndjson": "f49cf3e04d5a106abafa8565680775c33eb5ce6d299d734d5318a350949d3c33",
+        "deltas/2026.10.24.ndjson": "d843ef5558ca6597d9dd8828e88f3b0492c52e777866bfa25361aef6d3bb6a5d"
     }
 }
