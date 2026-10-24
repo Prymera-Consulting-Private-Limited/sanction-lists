@@ -1,0 +1,76 @@
+name: Freshness check
+
+# Once a day, after the nightly publish has had time to land: checks that the
+# current version is signed with a key the README lists, that latest.json names
+# the manifest beside it, and that the lists were read in the last 24 hours. The
+# badge in the README turns red when any of that fails.
+#
+# A normal night's commit lands between midnight and 03:00 UTC, so at 06:00 the
+# lists are 3 to 9 hours old (GitHub can start this run late); after a missed
+# night they are 27 or more. It reads about 20 KB, uses no third-party action
+# and changes nothing.
+#
+# This file is not written by the publisher. It was added by hand, and the
+# console repository's docs/features/Sanction Lists.md says why.
+on:
+  schedule:
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    name: Signed and fresh
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check the current version
+        env:
+          MAX_AGE_HOURS: 24
+        run: |
+          node --input-type=module <<'EOF'
+          import { createHash, createPublicKey, verify } from "node:crypto";
+
+          // The commit this run is for, so a publish landing mid-run cannot mix two versions.
+          const base = `https://raw.githubusercontent.com/${process.env.GITHUB_REPOSITORY}/${process.env.GITHUB_SHA}`;
+
+          async function fetchBytes(path) {
+            const response = await fetch(`${base}/${path}`);
+            if (!response.ok) throw new Error(`${path}: HTTP ${response.status}`);
+            return Buffer.from(await response.arrayBuffer());
+          }
+
+          // The keys a consumer is told to trust: the README's Signatures table.
+          const readme = (await fetchBytes("README.md")).toString();
+          const keys = Object.fromEntries([...readme.matchAll(/^\| `([0-9a-f]{16})` \| `([A-Za-z0-9+\/]{43}=)` \|$/gm)].map((row) => [row[1], row[2]]));
+          if (Object.keys(keys).length === 0) throw new Error("README.md lists no signing keys.");
+
+          async function verified(path) {
+            const data = await fetchBytes(path);
+            const signature = JSON.parse((await fetchBytes(`${path}.sig`)).toString());
+            const key = keys[signature.key_id];
+            if (signature.algorithm !== "ed25519" || !key) throw new Error(`${path} is signed with a key the README does not list: ${signature.key_id}`);
+            const publicKey = createPublicKey({ key: { kty: "OKP", crv: "Ed25519", x: Buffer.from(key, "base64").toString("base64url") }, format: "jwk" });
+            if (!verify(null, data, publicKey, Buffer.from(signature.signature, "base64"))) throw new Error(`${path}: the signature does not match.`);
+            return { data, keyId: signature.key_id };
+          }
+
+          const sha256 = (bytes) => createHash("sha256").update(bytes).digest("hex");
+
+          const latestFile = await verified("latest.json");
+          const latest = JSON.parse(latestFile.data.toString());
+          const manifestFile = await verified("data/manifest.json");
+          const manifest = JSON.parse(manifestFile.data.toString());
+          if (manifest.version !== latest.version || sha256(manifestFile.data) !== latest.manifest_sha256) {
+            throw new Error(`latest.json names ${latest.version}, but the manifest beside it is not that version's.`);
+          }
+
+          const checkedAt = new Date(latest.checked_at ?? latest.generated_at);
+          const ageHours = (Date.now() - checkedAt.getTime()) / 3600000;
+          console.log(`Version ${latest.version}, signed with ${latestFile.keyId}. The lists were last read at ${checkedAt.toISOString()}, ${ageHours.toFixed(1)} hours ago.`);
+          if (!(ageHours < Number(process.env.MAX_AGE_HOURS))) {
+            throw new Error(`The lists were last read ${ageHours.toFixed(1)} hours ago, more than ${process.env.MAX_AGE_HOURS}: the nightly run is overdue.`);
+          }
+          EOF
