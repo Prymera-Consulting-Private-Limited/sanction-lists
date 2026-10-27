@@ -1,0 +1,300 @@
+{
+    "checks": [
+        {
+            "list": "UNSC",
+            "check": "delta_replay",
+            "outcome": "passed",
+            "figures": {
+                "against": "2026.10.25"
+            }
+        },
+        {
+            "list": "SECO",
+            "check": "delta_replay",
+            "outcome": "passed",
+            "figures": {
+                "against": "2026.10.25"
+            }
+        },
+        {
+            "list": "OFAC-SDN",
+            "check": "delta_replay",
+            "outcome": "passed",
+            "figures": {
+                "against": "2026.10.25"
+            }
+        },
+        {
+            "list": "OFAC-CONSOLIDATED",
+            "check": "delta_replay",
+            "outcome": "passed",
+            "figures": {
+                "against": "2026.10.25"
+            }
+        },
+        {
+            "list": "THEUKLIST",
+            "check": "delta_replay",
+            "outcome": "passed",
+            "figures": {
+                "against": "2026.10.25"
+            }
+        },
+        {
+            "list": "EU-FINANCIAL-SANCTIONS",
+            "check": "delta_replay",
+            "outcome": "passed",
+            "figures": {
+                "against": "2026.10.25"
+            }
+        },
+        {
+            "list": "DFAT",
+            "check": "delta_replay",
+            "outcome": "passed",
+            "figures": {
+                "against": "2026.10.25"
+            }
+        },
+        {
+            "list": "CSEMA",
+            "check": "delta_replay",
+            "outcome": "passed",
+            "figures": {
+                "against": "2026.10.25"
+            }
+        },
+        {
+            "list": "UNSC",
+            "check": "rejections",
+            "outcome": "passed",
+            "figures": {
+                "rejected": 0,
+                "previous": 0
+            }
+        },
+        {
+            "list": "UNSC",
+            "check": "removals",
+            "outcome": "passed",
+            "figures": {
+                "removed": 0,
+                "previous_entities": 1007,
+                "max_share_basis_points": 200
+            }
+        },
+        {
+            "list": "UNSC",
+            "check": "data_as_of",
+            "outcome": "passed",
+            "figures": {
+                "data_as_of": "2026-10-26",
+                "previous": "2026-10-24"
+            }
+        },
+        {
+            "list": "SECO",
+            "check": "rejections",
+            "outcome": "passed",
+            "figures": {
+                "rejected": 0,
+                "previous": 0
+            }
+        },
+        {
+            "list": "SECO",
+            "check": "removals",
+            "outcome": "passed",
+            "figures": {
+                "removed": 0,
+                "previous_entities": 8667,
+                "max_share_basis_points": 200
+            }
+        },
+        {
+            "list": "SECO",
+            "check": "data_as_of",
+            "outcome": "passed",
+            "figures": {
+                "data_as_of": "2026-10-20",
+                "previous": "2026-10-20"
+            }
+        },
+        {
+            "list": "OFAC-SDN",
+            "check": "rejections",
+            "outcome": "passed",
+            "figures": {
+                "rejected": 0,
+                "previous": 0
+            }
+        },
+        {
+            "list": "OFAC-SDN",
+            "check": "removals",
+            "outcome": "passed",
+            "figures": {
+                "removed": 0,
+                "previous_entities": 19471,
+                "max_share_basis_points": 200
+            }
+        },
+        {
+            "list": "OFAC-SDN",
+            "check": "data_as_of",
+            "outcome": "passed",
+            "figures": {
+                "data_as_of": "2026-10-21",
+                "previous": "2026-10-21"
+            }
+        },
+        {
+            "list": "OFAC-CONSOLIDATED",
+            "check": "rejections",
+            "outcome": "passed",
+            "figures": {
+                "rejected": 0,
+                "previous": 0
+            }
+        },
+        {
+            "list": "OFAC-CONSOLIDATED",
+            "check": "removals",
+            "outcome": "passed",
+            "figures": {
+                "removed": 0,
+                "previous_entities": 486,
+                "max_share_basis_points": 200
+            }
+        },
+        {
+            "list": "OFAC-CONSOLIDATED",
+            "check": "data_as_of",
+            "outcome": "passed",
+            "figures": {
+                "data_as_of": "2026-10-19",
+                "previous": "2026-10-19"
+            }
+        },
+        {
+            "list": "THEUKLIST",
+            "check": "rejections",
+            "outcome": "passed",
+            "figures": {
+                "rejected": 1,
+                "previous": 1
+            }
+        },
+        {
+            "list": "THEUKLIST",
+            "check": "removals",
+            "outcome": "passed",
+            "figures": {
+                "removed": 0,
+                "previous_entities": 6408,
+                "max_share_basis_points": 200
+            }
+        },
+        {
+            "list": "THEUKLIST",
+            "check": "data_as_of",
+            "outcome": "passed",
+            "figures": {
+                "data_as_of": "2026-10-26",
+                "previous": "2026-10-16"
+            }
+        },
+        {
+            "list": "EU-FINANCIAL-SANCTIONS",
+            "check": "rejections",
+            "outcome": "passed",
+            "figures": {
+                "rejected": 0,
+                "previous": 0
+            }
+        },
+        {
+            "list": "EU-FINANCIAL-SANCTIONS",
+            "check": "removals",
+            "outcome": "passed",
+            "figures": {
+                "removed": 0,
+                "previous_entities": 6269,
+                "max_share_basis_points": 200
+            }
+        },
+        {
+            "list": "EU-FINANCIAL-SANCTIONS",
+            "check": "data_as_of",
+            "outcome": "passed",
+            "figures": {
+                "data_as_of": "2026-10-23",
+                "previous": "2026-10-23"
+            }
+        },
+        {
+            "list": "DFAT",
+            "check": "rejections",
+            "outcome": "passed",
+            "figures": {
+                "rejected": 0,
+                "previous": 0
+            }
+        },
+        {
+            "list": "DFAT",
+            "check": "removals",
+            "outcome": "passed",
+            "figures": {
+                "removed": 0,
+                "previous_entities": 4013,
+                "max_share_basis_points": 200
+            }
+        },
+        {
+            "list": "DFAT",
+            "check": "data_as_of",
+            "outcome": "passed",
+            "figures": {
+                "data_as_of": "2026-10-25",
+                "previous": "2026-10-22"
+            }
+        },
+        {
+            "list": "CSEMA",
+            "check": "rejections",
+            "outcome": "passed",
+            "figures": {
+                "rejected": 0,
+                "previous": 0
+            }
+        },
+        {
+            "list": "CSEMA",
+            "check": "removals",
+            "outcome": "passed",
+            "figures": {
+                "removed": 0,
+                "previous_entities": 5708,
+                "max_share_basis_points": 200
+            }
+        },
+        {
+            "list": "CSEMA",
+            "check": "data_as_of",
+            "outcome": "passed",
+            "figures": {
+                "data_as_of": null,
+                "previous": null
+            }
+        }
+    ],
+    "excluded": [],
+    "kept_with_warning": [
+        {
+            "list": "THEUKLIST",
+            "locator": "Designation RUS2701",
+            "reason": "unreadable date of birth \"15/08/19yy\", kept as raw text"
+        }
+    ]
+}

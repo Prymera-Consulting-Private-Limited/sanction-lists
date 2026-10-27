@@ -1,9 +1,9 @@
 {
     "schema_version": 1,
     "normalization_version": 1,
-    "version": "2026.10.25",
-    "previous_version": "2026.10.24",
-    "generated_at": "2026-10-25T00:08:37Z",
+    "version": "2026.10.27",
+    "previous_version": "2026.10.25",
+    "generated_at": "2026-10-27T01:19:59Z",
     "lists": {
         "UNSC": {
             "title": "UN Consolidated Sanctions",
@@ -11,18 +11,30 @@
             "url": "https://main.un.org/securitycouncil/en/content/un-sc-consolidated-list",
             "source": {
                 "file": "un-sc-consolidated.xml",
-                "sha256": "3230350e4ffab2b2e00877664ae4209e2c5e9fa7ad23966d6e591773f95b6793",
-                "bytes": 2175904,
-                "data_as_of": "2026-10-24",
-                "data_as_of_raw": "2026-10-24T23:00:07.335Z"
+                "sha256": "bece99fd69f66646ab90d70c2d057d6142df6ba6b8f1b0e41590e8a6af135fb5",
+                "bytes": 2176094,
+                "data_as_of": "2026-10-26",
+                "data_as_of_raw": "2026-10-26T23:00:02.307Z"
+            },
+            "parser": {
+                "name": "UnscParser",
+                "version": 1
             },
             "entities": 1007,
+            "listed": 1007,
+            "entity_types": {
+                "individual": 733,
+                "entity": 274,
+                "vessel": 0,
+                "aircraft": 0
+            },
+            "merged_duplicates": 0,
             "rejections": 0,
             "files": [
                 {
                     "path": "data/UNSC.ndjson",
-                    "sha256": "52aa51aefd2627fb30c844dcf8969d328e132946b10011c75d0f4152f7052525",
-                    "bytes": 2015291
+                    "sha256": "0a20bdc433fd5413ca9d02b7c96a6d321c33e3487effb4e4054d7db535a437e8",
+                    "bytes": 2015168
                 }
             ],
             "carried_forward_from": null
@@ -38,7 +50,19 @@
                 "data_as_of": "2026-10-20",
                 "data_as_of_raw": "2026-10-20"
             },
+            "parser": {
+                "name": "SecoParser",
+                "version": 1
+            },
             "entities": 8667,
+            "listed": 7103,
+            "entity_types": {
+                "individual": 4647,
+                "entity": 3329,
+                "vessel": 691,
+                "aircraft": 0
+            },
+            "merged_duplicates": 0,
             "rejections": 0,
             "files": [
                 {
@@ -60,7 +84,19 @@
                 "data_as_of": "2026-10-21",
                 "data_as_of_raw": "2026-10-21T00:00:00-04:00"
             },
+            "parser": {
+                "name": "OfacEnhancedXmlParser",
+                "version": 1
+            },
             "entities": 19471,
+            "listed": 19471,
+            "entity_types": {
+                "individual": 7519,
+                "entity": 10042,
+                "vessel": 1568,
+                "aircraft": 342
+            },
+            "merged_duplicates": 0,
             "rejections": 0,
             "files": [
                 {
@@ -82,7 +118,19 @@
                 "data_as_of": "2026-10-19",
                 "data_as_of_raw": "2026-10-19T00:00:00"
             },
+            "parser": {
+                "name": "OfacEnhancedXmlParser",
+                "version": 1
+            },
             "entities": 486,
+            "listed": 486,
+            "entity_types": {
+                "individual": 118,
+                "entity": 368,
+                "vessel": 0,
+                "aircraft": 0
+            },
+            "merged_duplicates": 0,
             "rejections": 0,
             "files": [
                 {
@@ -99,18 +147,30 @@
             "url": "https://www.gov.uk/government/publications/the-uk-sanctions-list",
             "source": {
                 "file": "uk-sanction-list.xml",
-                "sha256": "8e71e2237d0dee3191d433f94ba6cec65ec76b5f0f3e9d2e42b4f3f992682281",
-                "bytes": 22051514,
-                "data_as_of": "2026-10-16",
-                "data_as_of_raw": "16/10/2026"
+                "sha256": "907508664dfb9b5978f9cffd3feac8b39ecd8082949dd73285dc99d293a6b2dd",
+                "bytes": 22096429,
+                "data_as_of": "2026-10-26",
+                "data_as_of_raw": "26/10/2026"
             },
-            "entities": 6408,
+            "parser": {
+                "name": "UkSanctionsListParser",
+                "version": 1
+            },
+            "entities": 6423,
+            "listed": 6423,
+            "entity_types": {
+                "individual": 4073,
+                "entity": 1667,
+                "vessel": 683,
+                "aircraft": 0
+            },
+            "merged_duplicates": 0,
             "rejections": 1,
             "files": [
                 {
                     "path": "data/THEUKLIST.ndjson",
-                    "sha256": "8434af49e6af7a0ce6e9230d502d0d2ad73621116cc877020b742506b97494ea",
-                    "bytes": 14412276
+                    "sha256": "2cd0142bb983e2a8a4f292f74e3be105ccdea827b7faff606a6afe205d6db6d8",
+                    "bytes": 14440359
                 }
             ],
             "carried_forward_from": null
@@ -126,7 +186,19 @@
                 "data_as_of": "2026-10-23",
                 "data_as_of_raw": "2026-10-23T17:05:43.888+02:00"
             },
+            "parser": {
+                "name": "EuFinancialSanctionsParser",
+                "version": 1
+            },
             "entities": 6269,
+            "listed": 6269,
+            "entity_types": {
+                "individual": 4490,
+                "entity": 1779,
+                "vessel": 0,
+                "aircraft": 0
+            },
+            "merged_duplicates": 0,
             "rejections": 0,
             "files": [
                 {
@@ -143,12 +215,24 @@
             "url": "https://www.dfat.gov.au/international-relations/security/sanctions/consolidated-list",
             "source": {
                 "file": "dfat.xlsx",
-                "sha256": "063f2c6e58dc5b804d68b1df26c4cca8d69be03483ed6dca95417d2c0afa2c08",
-                "bytes": 1423426,
-                "data_as_of": "2026-10-22",
-                "data_as_of_raw": "2026-10-22T01:03:21Z"
+                "sha256": "65ba2cd37a999c59bf3838b0b0cda7cf80957a245a598f4d2c5f1e5dedcd0c06",
+                "bytes": 1423425,
+                "data_as_of": "2026-10-25",
+                "data_as_of_raw": "2026-10-25T23:41:42Z"
+            },
+            "parser": {
+                "name": "DfatXlsxParser",
+                "version": 1
             },
             "entities": 4013,
+            "listed": 4013,
+            "entity_types": {
+                "individual": 2577,
+                "entity": 1077,
+                "vessel": 359,
+                "aircraft": 0
+            },
+            "merged_duplicates": 0,
             "rejections": 0,
             "files": [
                 {
@@ -170,7 +254,19 @@
                 "data_as_of": null,
                 "data_as_of_raw": null
             },
+            "parser": {
+                "name": "CsemaParser",
+                "version": 1
+            },
             "entities": 5708,
+            "listed": 5708,
+            "entity_types": {
+                "individual": 3527,
+                "entity": 1450,
+                "vessel": 731,
+                "aircraft": 0
+            },
+            "merged_duplicates": 0,
             "rejections": 0,
             "files": [
                 {
@@ -183,17 +279,17 @@
         }
     },
     "delta": {
-        "path": "deltas/2026.10.25.ndjson",
-        "sha256": "2724b4f6e0a6d8b0c0fc9264583a5c460ef8501e8074c3f397da68070987c030",
-        "bytes": 468,
-        "added": 0,
-        "changed": 0,
-        "removed": 3
+        "path": "deltas/2026.10.27.ndjson",
+        "sha256": "20db90da821f88b54c5591dcde832aa748d6d164326fd4c8a41d4970908ac4c1",
+        "bytes": 35720,
+        "added": 15,
+        "changed": 3,
+        "removed": 0
     },
     "changes": {
-        "added": 0,
-        "changed": 0,
-        "removed": 3
+        "added": 15,
+        "changed": 3,
+        "removed": 0
     },
     "files": {
         "data/CSEMA.ndjson": "de1392f20e483b3643c543f0e7b908d6dea554601b111f4af9d240526845c5ce",
@@ -202,8 +298,8 @@
         "data/OFAC-CONSOLIDATED.ndjson": "21dbd43463d50fa3467339d3e79540d1817a25b009f46798f7c6dc4daba8814a",
         "data/OFAC-SDN.ndjson": "5157fc28fff08de437390f76da9cc20bb10c7cf150affc8bce1570cac5eb92cb",
         "data/SECO.ndjson": "a5468f7c20c2f02232ac6ac05479bdd1ea73045756e126168b4d9ecd33bf7fe1",
-        "data/THEUKLIST.ndjson": "8434af49e6af7a0ce6e9230d502d0d2ad73621116cc877020b742506b97494ea",
-        "data/UNSC.ndjson": "52aa51aefd2627fb30c844dcf8969d328e132946b10011c75d0f4152f7052525",
+        "data/THEUKLIST.ndjson": "2cd0142bb983e2a8a4f292f74e3be105ccdea827b7faff606a6afe205d6db6d8",
+        "data/UNSC.ndjson": "0a20bdc433fd5413ca9d02b7c96a6d321c33e3487effb4e4054d7db535a437e8",
         "deltas/2026.09.25.ndjson": "586fcf1e7afc8951b95ee9dc6e8de02bb653645257782cc9130ef6080f621f79",
         "deltas/2026.09.29.ndjson": "969a80a1e0b340a6021dce891822e024d3154bbbfaa7ebbfd9575aa140fda34c",
         "deltas/2026.10.03.ndjson": "7759f26451c5ab8829fcdb3c8c87952f2134f0c5c7a35805c93c730a60c0df37",
@@ -221,6 +317,13 @@
         "deltas/2026.10.22.ndjson": "018d22e6818a7128e99b011acd0af139759b2b73b78b2539e8ffbf923043196d",
         "deltas/2026.10.23.ndjson": "f49cf3e04d5a106abafa8565680775c33eb5ce6d299d734d5318a350949d3c33",
         "deltas/2026.10.24.ndjson": "d843ef5558ca6597d9dd8828e88f3b0492c52e777866bfa25361aef6d3bb6a5d",
-        "deltas/2026.10.25.ndjson": "2724b4f6e0a6d8b0c0fc9264583a5c460ef8501e8074c3f397da68070987c030"
-    }
+        "deltas/2026.10.25.ndjson": "2724b4f6e0a6d8b0c0fc9264583a5c460ef8501e8074c3f397da68070987c030",
+        "deltas/2026.10.27.ndjson": "20db90da821f88b54c5591dcde832aa748d6d164326fd4c8a41d4970908ac4c1"
+    },
+    "validation": {
+        "path": "data/validation.json",
+        "sha256": "33c944bb4c330ed7cdcd15c265d4066b00f7d722549c41bf3d8c06b411a59de6",
+        "bytes": 7840
+    },
+    "acceptances": []
 }
