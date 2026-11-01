@@ -5,7 +5,7 @@
             "check": "delta_replay",
             "outcome": "passed",
             "figures": {
-                "against": "2026.10.25"
+                "against": "2026.10.27"
             }
         },
         {
@@ -13,7 +13,7 @@
             "check": "delta_replay",
             "outcome": "passed",
             "figures": {
-                "against": "2026.10.25"
+                "against": "2026.10.27"
             }
         },
         {
@@ -21,7 +21,7 @@
             "check": "delta_replay",
             "outcome": "passed",
             "figures": {
-                "against": "2026.10.25"
+                "against": "2026.10.27"
             }
         },
         {
@@ -29,7 +29,7 @@
             "check": "delta_replay",
             "outcome": "passed",
             "figures": {
-                "against": "2026.10.25"
+                "against": "2026.10.27"
             }
         },
         {
@@ -37,7 +37,7 @@
             "check": "delta_replay",
             "outcome": "passed",
             "figures": {
-                "against": "2026.10.25"
+                "against": "2026.10.27"
             }
         },
         {
@@ -45,7 +45,7 @@
             "check": "delta_replay",
             "outcome": "passed",
             "figures": {
-                "against": "2026.10.25"
+                "against": "2026.10.27"
             }
         },
         {
@@ -53,7 +53,7 @@
             "check": "delta_replay",
             "outcome": "passed",
             "figures": {
-                "against": "2026.10.25"
+                "against": "2026.10.27"
             }
         },
         {
@@ -61,7 +61,7 @@
             "check": "delta_replay",
             "outcome": "passed",
             "figures": {
-                "against": "2026.10.25"
+                "against": "2026.10.27"
             }
         },
         {
@@ -88,8 +88,8 @@
             "check": "data_as_of",
             "outcome": "passed",
             "figures": {
-                "data_as_of": "2026-10-26",
-                "previous": "2026-10-24"
+                "data_as_of": "2026-10-31",
+                "previous": "2026-10-26"
             }
         },
         {
@@ -116,7 +116,7 @@
             "check": "data_as_of",
             "outcome": "passed",
             "figures": {
-                "data_as_of": "2026-10-20",
+                "data_as_of": "2026-10-29",
                 "previous": "2026-10-20"
             }
         },
@@ -144,7 +144,7 @@
             "check": "data_as_of",
             "outcome": "passed",
             "figures": {
-                "data_as_of": "2026-10-21",
+                "data_as_of": "2026-10-28",
                 "previous": "2026-10-21"
             }
         },
@@ -190,8 +190,8 @@
             "check": "removals",
             "outcome": "passed",
             "figures": {
-                "removed": 0,
-                "previous_entities": 6408,
+                "removed": 3,
+                "previous_entities": 6423,
                 "max_share_basis_points": 200
             }
         },
@@ -200,8 +200,8 @@
             "check": "data_as_of",
             "outcome": "passed",
             "figures": {
-                "data_as_of": "2026-10-26",
-                "previous": "2026-10-16"
+                "data_as_of": "2026-10-30",
+                "previous": "2026-10-26"
             }
         },
         {
@@ -246,7 +246,7 @@
             "check": "removals",
             "outcome": "passed",
             "figures": {
-                "removed": 0,
+                "removed": 3,
                 "previous_entities": 4013,
                 "max_share_basis_points": 200
             }
@@ -256,8 +256,8 @@
             "check": "data_as_of",
             "outcome": "passed",
             "figures": {
-                "data_as_of": "2026-10-25",
-                "previous": "2026-10-22"
+                "data_as_of": "2026-10-27",
+                "previous": "2026-10-25"
             }
         },
         {
