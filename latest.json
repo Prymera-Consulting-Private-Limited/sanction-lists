@@ -4,60 +4,60 @@
     "tag": "v2026.11.01",
     "previous_version": "2026.10.27",
     "generated_at": "2026-11-01T00:51:31Z",
-    "checked_at": "2026-11-01T00:51:31Z",
+    "checked_at": "2026-11-02T01:24:03Z",
     "manifest_sha256": "2dafde9078421c9a11c7f220f48aa9e1f9d32b4c6e8ac586777279c108277ce2",
     "sources": {
         "UNSC": {
-            "checked_at": "2026-11-01T00:51:31Z",
+            "checked_at": "2026-11-02T01:24:03Z",
             "data_as_of": "2026-10-31",
             "last_changed_in": "2026.11.01",
             "max_data_age_days": 21,
             "max_unchanged_days": null
         },
         "SECO": {
-            "checked_at": "2026-11-01T00:51:31Z",
+            "checked_at": "2026-11-02T01:24:03Z",
             "data_as_of": "2026-10-29",
             "last_changed_in": "2026.11.01",
             "max_data_age_days": 60,
             "max_unchanged_days": null
         },
         "OFAC-SDN": {
-            "checked_at": "2026-11-01T00:51:31Z",
+            "checked_at": "2026-11-02T01:24:03Z",
             "data_as_of": "2026-10-28",
             "last_changed_in": "2026.11.01",
             "max_data_age_days": 21,
             "max_unchanged_days": null
         },
         "OFAC-CONSOLIDATED": {
-            "checked_at": "2026-11-01T00:51:31Z",
+            "checked_at": "2026-11-02T01:24:03Z",
             "data_as_of": "2026-10-19",
             "last_changed_in": "2026.10.20",
             "max_data_age_days": 180,
             "max_unchanged_days": null
         },
         "THEUKLIST": {
-            "checked_at": "2026-11-01T00:51:31Z",
+            "checked_at": "2026-11-02T01:24:03Z",
             "data_as_of": "2026-10-30",
             "last_changed_in": "2026.11.01",
             "max_data_age_days": 30,
             "max_unchanged_days": null
         },
         "EU-FINANCIAL-SANCTIONS": {
-            "checked_at": "2026-11-01T00:51:31Z",
+            "checked_at": "2026-11-02T01:24:03Z",
             "data_as_of": "2026-10-23",
             "last_changed_in": "2026.10.24",
             "max_data_age_days": 45,
             "max_unchanged_days": null
         },
         "DFAT": {
-            "checked_at": "2026-11-01T00:51:31Z",
+            "checked_at": "2026-11-02T01:24:03Z",
             "data_as_of": "2026-10-27",
             "last_changed_in": "2026.11.01",
             "max_data_age_days": 45,
             "max_unchanged_days": null
         },
         "CSEMA": {
-            "checked_at": "2026-11-01T00:51:31Z",
+            "checked_at": "2026-11-02T01:24:03Z",
             "data_as_of": null,
             "last_changed_in": "2026.10.17",
             "max_data_age_days": null,
