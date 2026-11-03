@@ -5,7 +5,7 @@
             "check": "delta_replay",
             "outcome": "passed",
             "figures": {
-                "against": "2026.10.27"
+                "against": "2026.11.01"
             }
         },
         {
@@ -13,7 +13,7 @@
             "check": "delta_replay",
             "outcome": "passed",
             "figures": {
-                "against": "2026.10.27"
+                "against": "2026.11.01"
             }
         },
         {
@@ -21,7 +21,7 @@
             "check": "delta_replay",
             "outcome": "passed",
             "figures": {
-                "against": "2026.10.27"
+                "against": "2026.11.01"
             }
         },
         {
@@ -29,7 +29,7 @@
             "check": "delta_replay",
             "outcome": "passed",
             "figures": {
-                "against": "2026.10.27"
+                "against": "2026.11.01"
             }
         },
         {
@@ -37,7 +37,7 @@
             "check": "delta_replay",
             "outcome": "passed",
             "figures": {
-                "against": "2026.10.27"
+                "against": "2026.11.01"
             }
         },
         {
@@ -45,7 +45,7 @@
             "check": "delta_replay",
             "outcome": "passed",
             "figures": {
-                "against": "2026.10.27"
+                "against": "2026.11.01"
             }
         },
         {
@@ -53,7 +53,7 @@
             "check": "delta_replay",
             "outcome": "passed",
             "figures": {
-                "against": "2026.10.27"
+                "against": "2026.11.01"
             }
         },
         {
@@ -61,7 +61,7 @@
             "check": "delta_replay",
             "outcome": "passed",
             "figures": {
-                "against": "2026.10.27"
+                "against": "2026.11.01"
             }
         },
         {
@@ -70,7 +70,19 @@
             "outcome": "passed",
             "figures": {
                 "rejected": 0,
-                "previous": 0
+                "previous": 0,
+                "excluded": 0,
+                "previous_excluded": 0
+            }
+        },
+        {
+            "list": "UNSC",
+            "check": "merged_duplicates",
+            "outcome": "passed",
+            "figures": {
+                "merged": 0,
+                "previous": 0,
+                "refuse_from": 10
             }
         },
         {
@@ -80,7 +92,40 @@
             "figures": {
                 "removed": 0,
                 "previous_entities": 1007,
-                "max_share_basis_points": 200
+                "max_share_basis_points": 89,
+                "refuse_from": 10
+            }
+        },
+        {
+            "list": "UNSC",
+            "check": "additions",
+            "outcome": "passed",
+            "figures": {
+                "added": 0,
+                "previous_entities": 1007,
+                "max_share_basis_points": 500,
+                "refuse_from": 10
+            }
+        },
+        {
+            "list": "UNSC",
+            "check": "minimum_entities",
+            "outcome": "passed",
+            "figures": {
+                "entities": 1007,
+                "min_entities": 906
+            }
+        },
+        {
+            "list": "UNSC",
+            "check": "type_mix",
+            "outcome": "passed",
+            "figures": {
+                "entity_type": "individual",
+                "share_basis_points": 7279,
+                "previous_share_basis_points": 7279,
+                "max_shift_points": 5,
+                "refuse_from": 10
             }
         },
         {
@@ -88,8 +133,8 @@
             "check": "data_as_of",
             "outcome": "passed",
             "figures": {
-                "data_as_of": "2026-10-31",
-                "previous": "2026-10-26"
+                "data_as_of": "2026-11-02",
+                "previous": "2026-10-31"
             }
         },
         {
@@ -98,7 +143,19 @@
             "outcome": "passed",
             "figures": {
                 "rejected": 0,
-                "previous": 0
+                "previous": 0,
+                "excluded": 0,
+                "previous_excluded": 0
+            }
+        },
+        {
+            "list": "SECO",
+            "check": "merged_duplicates",
+            "outcome": "passed",
+            "figures": {
+                "merged": 0,
+                "previous": 0,
+                "refuse_from": 10
             }
         },
         {
@@ -108,7 +165,51 @@
             "figures": {
                 "removed": 0,
                 "previous_entities": 8667,
-                "max_share_basis_points": 200
+                "max_share_basis_points": 50,
+                "refuse_from": 10
+            }
+        },
+        {
+            "list": "SECO",
+            "check": "additions",
+            "outcome": "passed",
+            "figures": {
+                "added": 0,
+                "previous_entities": 8667,
+                "max_share_basis_points": 500,
+                "refuse_from": 10
+            }
+        },
+        {
+            "list": "SECO",
+            "check": "in_force",
+            "outcome": "passed",
+            "figures": {
+                "listed": 7100,
+                "previous_listed": 7100,
+                "max_share_basis_points": 50,
+                "refuse_from": 10
+            }
+        },
+        {
+            "list": "SECO",
+            "check": "minimum_entities",
+            "outcome": "passed",
+            "figures": {
+                "entities": 8667,
+                "min_entities": 7800
+            }
+        },
+        {
+            "list": "SECO",
+            "check": "type_mix",
+            "outcome": "passed",
+            "figures": {
+                "entity_type": "individual",
+                "share_basis_points": 5361,
+                "previous_share_basis_points": 5361,
+                "max_shift_points": 5,
+                "refuse_from": 10
             }
         },
         {
@@ -116,8 +217,8 @@
             "check": "data_as_of",
             "outcome": "passed",
             "figures": {
-                "data_as_of": "2026-10-29",
-                "previous": "2026-10-20"
+                "data_as_of": "2026-11-03",
+                "previous": "2026-10-29"
             }
         },
         {
@@ -126,7 +227,19 @@
             "outcome": "passed",
             "figures": {
                 "rejected": 0,
-                "previous": 0
+                "previous": 0,
+                "excluded": 0,
+                "previous_excluded": 0
+            }
+        },
+        {
+            "list": "OFAC-SDN",
+            "check": "merged_duplicates",
+            "outcome": "passed",
+            "figures": {
+                "merged": 0,
+                "previous": 0,
+                "refuse_from": 10
             }
         },
         {
@@ -135,8 +248,41 @@
             "outcome": "passed",
             "figures": {
                 "removed": 0,
-                "previous_entities": 19471,
-                "max_share_basis_points": 200
+                "previous_entities": 19484,
+                "max_share_basis_points": 192,
+                "refuse_from": 10
+            }
+        },
+        {
+            "list": "OFAC-SDN",
+            "check": "additions",
+            "outcome": "passed",
+            "figures": {
+                "added": 0,
+                "previous_entities": 19484,
+                "max_share_basis_points": 500,
+                "refuse_from": 10
+            }
+        },
+        {
+            "list": "OFAC-SDN",
+            "check": "minimum_entities",
+            "outcome": "passed",
+            "figures": {
+                "entities": 19484,
+                "min_entities": 17426
+            }
+        },
+        {
+            "list": "OFAC-SDN",
+            "check": "type_mix",
+            "outcome": "passed",
+            "figures": {
+                "entity_type": "individual",
+                "share_basis_points": 3864,
+                "previous_share_basis_points": 3864,
+                "max_shift_points": 5,
+                "refuse_from": 10
             }
         },
         {
@@ -145,7 +291,7 @@
             "outcome": "passed",
             "figures": {
                 "data_as_of": "2026-10-28",
-                "previous": "2026-10-21"
+                "previous": "2026-10-28"
             }
         },
         {
@@ -154,7 +300,19 @@
             "outcome": "passed",
             "figures": {
                 "rejected": 0,
-                "previous": 0
+                "previous": 0,
+                "excluded": 0,
+                "previous_excluded": 0
+            }
+        },
+        {
+            "list": "OFAC-CONSOLIDATED",
+            "check": "merged_duplicates",
+            "outcome": "passed",
+            "figures": {
+                "merged": 0,
+                "previous": 0,
+                "refuse_from": 10
             }
         },
         {
@@ -164,7 +322,40 @@
             "figures": {
                 "removed": 0,
                 "previous_entities": 486,
-                "max_share_basis_points": 200
+                "max_share_basis_points": 50,
+                "refuse_from": 10
+            }
+        },
+        {
+            "list": "OFAC-CONSOLIDATED",
+            "check": "additions",
+            "outcome": "passed",
+            "figures": {
+                "added": 0,
+                "previous_entities": 486,
+                "max_share_basis_points": 500,
+                "refuse_from": 10
+            }
+        },
+        {
+            "list": "OFAC-CONSOLIDATED",
+            "check": "minimum_entities",
+            "outcome": "passed",
+            "figures": {
+                "entities": 486,
+                "min_entities": 432
+            }
+        },
+        {
+            "list": "OFAC-CONSOLIDATED",
+            "check": "type_mix",
+            "outcome": "passed",
+            "figures": {
+                "entity_type": "individual",
+                "share_basis_points": 2427,
+                "previous_share_basis_points": 2427,
+                "max_shift_points": 5,
+                "refuse_from": 10
             }
         },
         {
@@ -182,7 +373,19 @@
             "outcome": "passed",
             "figures": {
                 "rejected": 1,
-                "previous": 1
+                "previous": 1,
+                "excluded": 0,
+                "previous_excluded": 0
+            }
+        },
+        {
+            "list": "THEUKLIST",
+            "check": "merged_duplicates",
+            "outcome": "passed",
+            "figures": {
+                "merged": 0,
+                "previous": 0,
+                "refuse_from": 10
             }
         },
         {
@@ -190,9 +393,42 @@
             "check": "removals",
             "outcome": "passed",
             "figures": {
-                "removed": 3,
-                "previous_entities": 6423,
-                "max_share_basis_points": 200
+                "removed": 0,
+                "previous_entities": 6420,
+                "max_share_basis_points": 50,
+                "refuse_from": 10
+            }
+        },
+        {
+            "list": "THEUKLIST",
+            "check": "additions",
+            "outcome": "passed",
+            "figures": {
+                "added": 0,
+                "previous_entities": 6420,
+                "max_share_basis_points": 500,
+                "refuse_from": 10
+            }
+        },
+        {
+            "list": "THEUKLIST",
+            "check": "minimum_entities",
+            "outcome": "passed",
+            "figures": {
+                "entities": 6420,
+                "min_entities": 5705
+            }
+        },
+        {
+            "list": "THEUKLIST",
+            "check": "type_mix",
+            "outcome": "passed",
+            "figures": {
+                "entity_type": "individual",
+                "share_basis_points": 6339,
+                "previous_share_basis_points": 6339,
+                "max_shift_points": 5,
+                "refuse_from": 10
             }
         },
         {
@@ -201,7 +437,7 @@
             "outcome": "passed",
             "figures": {
                 "data_as_of": "2026-10-30",
-                "previous": "2026-10-26"
+                "previous": "2026-10-30"
             }
         },
         {
@@ -210,7 +446,19 @@
             "outcome": "passed",
             "figures": {
                 "rejected": 0,
-                "previous": 0
+                "previous": 0,
+                "excluded": 0,
+                "previous_excluded": 0
+            }
+        },
+        {
+            "list": "EU-FINANCIAL-SANCTIONS",
+            "check": "merged_duplicates",
+            "outcome": "passed",
+            "figures": {
+                "merged": 0,
+                "previous": 0,
+                "refuse_from": 10
             }
         },
         {
@@ -220,7 +468,40 @@
             "figures": {
                 "removed": 0,
                 "previous_entities": 6269,
-                "max_share_basis_points": 200
+                "max_share_basis_points": 50,
+                "refuse_from": 10
+            }
+        },
+        {
+            "list": "EU-FINANCIAL-SANCTIONS",
+            "check": "additions",
+            "outcome": "passed",
+            "figures": {
+                "added": 0,
+                "previous_entities": 6269,
+                "max_share_basis_points": 500,
+                "refuse_from": 10
+            }
+        },
+        {
+            "list": "EU-FINANCIAL-SANCTIONS",
+            "check": "minimum_entities",
+            "outcome": "passed",
+            "figures": {
+                "entities": 6269,
+                "min_entities": 5609
+            }
+        },
+        {
+            "list": "EU-FINANCIAL-SANCTIONS",
+            "check": "type_mix",
+            "outcome": "passed",
+            "figures": {
+                "entity_type": "individual",
+                "share_basis_points": 7162,
+                "previous_share_basis_points": 7162,
+                "max_shift_points": 5,
+                "refuse_from": 10
             }
         },
         {
@@ -238,7 +519,19 @@
             "outcome": "passed",
             "figures": {
                 "rejected": 0,
-                "previous": 0
+                "previous": 0,
+                "excluded": 0,
+                "previous_excluded": 0
+            }
+        },
+        {
+            "list": "DFAT",
+            "check": "merged_duplicates",
+            "outcome": "passed",
+            "figures": {
+                "merged": 0,
+                "previous": 0,
+                "refuse_from": 10
             }
         },
         {
@@ -246,9 +539,42 @@
             "check": "removals",
             "outcome": "passed",
             "figures": {
-                "removed": 3,
-                "previous_entities": 4013,
-                "max_share_basis_points": 200
+                "removed": 0,
+                "previous_entities": 4010,
+                "max_share_basis_points": 50,
+                "refuse_from": 10
+            }
+        },
+        {
+            "list": "DFAT",
+            "check": "additions",
+            "outcome": "passed",
+            "figures": {
+                "added": 0,
+                "previous_entities": 4010,
+                "max_share_basis_points": 814,
+                "refuse_from": 10
+            }
+        },
+        {
+            "list": "DFAT",
+            "check": "minimum_entities",
+            "outcome": "passed",
+            "figures": {
+                "entities": 4010,
+                "min_entities": 3515
+            }
+        },
+        {
+            "list": "DFAT",
+            "check": "type_mix",
+            "outcome": "passed",
+            "figures": {
+                "entity_type": "individual",
+                "share_basis_points": 6418,
+                "previous_share_basis_points": 6418,
+                "max_shift_points": 5,
+                "refuse_from": 10
             }
         },
         {
@@ -256,8 +582,8 @@
             "check": "data_as_of",
             "outcome": "passed",
             "figures": {
-                "data_as_of": "2026-10-27",
-                "previous": "2026-10-25"
+                "data_as_of": "2026-11-02",
+                "previous": "2026-10-27"
             }
         },
         {
@@ -266,7 +592,19 @@
             "outcome": "passed",
             "figures": {
                 "rejected": 0,
-                "previous": 0
+                "previous": 0,
+                "excluded": 0,
+                "previous_excluded": 0
+            }
+        },
+        {
+            "list": "CSEMA",
+            "check": "merged_duplicates",
+            "outcome": "passed",
+            "figures": {
+                "merged": 0,
+                "previous": 0,
+                "refuse_from": 10
             }
         },
         {
@@ -276,7 +614,40 @@
             "figures": {
                 "removed": 0,
                 "previous_entities": 5708,
-                "max_share_basis_points": 200
+                "max_share_basis_points": 50,
+                "refuse_from": 10
+            }
+        },
+        {
+            "list": "CSEMA",
+            "check": "additions",
+            "outcome": "passed",
+            "figures": {
+                "added": 0,
+                "previous_entities": 5708,
+                "max_share_basis_points": 500,
+                "refuse_from": 10
+            }
+        },
+        {
+            "list": "CSEMA",
+            "check": "minimum_entities",
+            "outcome": "passed",
+            "figures": {
+                "entities": 5708,
+                "min_entities": 5128
+            }
+        },
+        {
+            "list": "CSEMA",
+            "check": "type_mix",
+            "outcome": "passed",
+            "figures": {
+                "entity_type": "individual",
+                "share_basis_points": 6179,
+                "previous_share_basis_points": 6179,
+                "max_shift_points": 5,
+                "refuse_from": 10
             }
         },
         {

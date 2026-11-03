@@ -6,9 +6,9 @@ Schema version 1. Name normalisation version 1.
 
 | File | What it is |
 | --- | --- |
-| `latest.json` | The current version: `version`, `tag`, `previous_version`, `generated_at`, `checked_at`, `manifest_sha256`, and `sources`, how fresh each list is (see Freshness). |
-| `versions.json` | Every version in order, oldest first, each with its delta's path, sha256 and counts. |
-| `data/manifest.json` | For one version: per list, the source file it was built from (name, sha256, size, the publisher's "data as of" date), the code that built it (`parser`, see Parser versions), the number of entries (`entities`), how many of them are in force (`listed`: those without `delisted_on`), how many are of each `entity_type` (`entity_types`), how many records the source repeated and were merged into an entry (`merged_duplicates`), the number of rejected records, the data files with their sha256, and `carried_forward_from` when the list was not rebuilt in this version. `files` maps every data and delta file to its sha256. `validation` gives the path, sha256 and size of the version's `data/validation.json`, and `acceptances` who accepted a list a check would have held back, and why (see Validation). Older manifests lack `listed`, `entity_types` and `merged_duplicates`, and so does a list carried forward from one of them. Manifests published before `validation` and `acceptances` existed lack both. |
+| `latest.json` | The current version: `version`, `tag`, `previous_version`, `generated_at`, `checked_at`, `manifest_sha256`, `sources`, how fresh each list is (see Freshness), and `withdrawn`, every version the publisher has withdrawn (see Withdrawn versions). |
+| `versions.json` | Every version in order, oldest first, each with its delta's path, sha256 and counts. A withdrawn version keeps its entry, marked `"withdrawn": true`. |
+| `data/manifest.json` | For one version: per list, the source file it was built from (name, sha256, size, the publisher's "data as of" date), the code that built it (`parser`, see Parser versions), the number of entries (`entities`), how many of them are in force (`listed`: those without `delisted_on`), how many are of each `entity_type` (`entity_types`), how many records the source repeated and were merged into an entry, a reference differing from an earlier one only in case among them (`merged_duplicates`), the number of rejected records, the data files with their sha256, and `carried_forward_from` when the list was not rebuilt in this version. `files` maps every data and delta file to its sha256. `validation` gives the path, sha256 and size of the version's `data/validation.json`, and `acceptances` who accepted a list a check would have held back, and why (see Validation). Older manifests lack `listed`, `entity_types` and `merged_duplicates`, and so does a list carried forward from one of them. Manifests published before `validation` and `acceptances` existed lack both. |
 | `data/validation.json` | How one version was checked before it was published, and every record in the publishers' files that could not be used (see Validation). It belongs to a version only through that version's manifest. |
 | `data/<CODE>.ndjson` | The full current snapshot of one list, one entry per line, ordered by `id` compared byte by byte (`UNSC:10` comes before `UNSC:9`). |
 | `deltas/<version>.ndjson` | What changed in that version, one operation per line. The lines are grouped by list, in the order the codes are given for `list` under Entry, and ordered by `id` within each list as in a snapshot. That list order is not alphabetical, so the file as a whole need not be in `id` order. A list that did not change has no lines. |
@@ -26,12 +26,13 @@ To stay current, a consumer reads `latest.json` and then either:
 
 - loads every `data/<CODE>.ndjson` at the tag (a full load), or
 - applies, in order, the `deltas/<version>.ndjson` of every version after the one it
-  holds, taking the chain from `versions.json`.
+  holds, taking the chain from `versions.json` and leaving out withdrawn versions
+  (see Withdrawn versions).
 
 `versions.json` is not signed. Before applying a chain, check it against the signed
 manifests: each version's manifest, fetched and verified at its own tag, must name
-the version before it as `previous_version`. If any does not, load the full snapshot
-of the latest version instead.
+the version before it in the chain as `previous_version`. If any does not, load the
+full snapshot of the latest version instead.
 
 A full load should remove entries the snapshot no longer contains. After applying a
 delta chain, the consumer holds exactly what a full load of the last version gives.
@@ -48,6 +49,44 @@ is when every source was last read, whether or not that produced a version: on a
 day when nothing changed it moves forward and the version stays the same. A consumer
 can tell a quiet week from a dataset nobody is maintaining by its age. Versions
 published before `checked_at` existed lack it; read `generated_at` in its place.
+
+### Withdrawn versions
+
+A version found to be wrong after it was published is withdrawn, never deleted.
+`latest.json` then points back to the last good version, and its `withdrawn` lists
+every version ever withdrawn, oldest first:
+
+```json
+"withdrawn": [
+    {"version": "2026.11.03", "withdrawn_at": "2026-11-03T09:14:00Z", "reason": "Built from a source file cut short in transit."}
+]
+```
+
+`withdrawn_at` is UTC, in exactly that form. The list is cumulative: every
+`latest.json` published after a withdrawal carries it forward, so a consumer that
+was offline on the day still learns of it. A `latest.json` without `withdrawn` has
+withdrawn nothing, and `latest.json` never names as its `version` a version it also
+withdraws. The withdrawn version keeps its tag, so its files can still be read for
+audit, and keeps its entry in `versions.json`, marked `"withdrawn": true`. That mark
+is not signed: judge a withdrawal by the list in `latest.json`. Its delta leaves the
+`main` branch and stays at its tag, and no manifest published after the withdrawal
+lists it in `files`.
+
+A consumer should:
+
+- never load a withdrawn version, whether `latest.json` or a person asks for it;
+- if it holds a withdrawn version, load in full the version `latest.json` points
+  to, which also removes what the withdrawn version added;
+- leave withdrawn versions out of a delta chain. The version published after a
+  withdrawal follows on from the last good version and names it as
+  `previous_version`;
+- refuse a `latest.json` whose `version` is older than the one it holds, unless that
+  `latest.json` withdraws the version it holds. Only a withdrawal moves the
+  published version back, so anything else is an old copy being replayed or a
+  mistake at the publisher. Keep the version held until it is explained;
+- refuse a `latest.json` whose `withdrawn` is not in the form above.
+
+No version had been withdrawn when this section was written, on 30 October 2026.
 
 ## Freshness
 
@@ -146,15 +185,31 @@ record, not that one's, and says nothing about it.
 `checks` lists every check the publisher ran, in the order it ran them: first
 `delta_replay` for every list, in the order the codes are given for `list` under
 Entry; then, for each list rebuilt in this version that the version before also
-carried, in the same order, `rejections`, `removals` and `data_as_of`. A list
-carried forward was not read, so the change checks do not run for it, and the
-first version has nothing to compare with, so it records no checks at all.
+carried, in the same order, `rejections`, `merged_duplicates`, `removals`,
+`additions`, `in_force` (only for a list held to it), `minimum_entities`,
+`type_mix` and `data_as_of`. A list carried forward was not read, so the change
+checks do not run for it, and the first version has nothing to compare with, so
+it records no checks at all. Versions published before
+`merged_duplicates`, `additions`, `in_force`, `minimum_entities` and `type_mix`
+existed record only `rejections`, `removals` and `data_as_of`, and their
+`rejections` has no `excluded` or `previous_excluded`.
+
+Each list has its own limits, set by the publisher from how much the list has
+changed by before, and they can change from one version to the next. The
+figures record the limits each check applied. `refuse_from` is the fewest
+entries a change has to involve before a limit can hold a list back: a few
+entries are a large share of a small list without being a sign of anything.
 
 | `check` | `figures` | It would hold the list back when |
 | --- | --- | --- |
 | `delta_replay` | `against`: the version the delta applies to. | Never: a version whose delta, applied to the data files of the version before, does not give every one of its data files byte for byte is not published, and no person can accept it. It is recorded as passed even when the delta was then left out for being too large, because it was replayed before it was dropped. |
-| `rejections` | `rejected` and `previous`: how many records were rejected, whether left out or kept with a warning (see Rejected records), in this version and in the version before. | `rejected` is greater than `previous`. |
-| `removals` | `removed`, `previous_entities` (the list's entries in the version before) and `max_share_basis_points`, the largest share it may lose at once in hundredths of a percent (200 is 2%). | `removed` is more than that share of `previous_entities`. |
+| `rejections` | `rejected` and `previous`: how many records were rejected, whether left out or kept with a warning (see Rejected records), in this version and in the version before. `excluded` and `previous_excluded`: how many of them were left out. The version before's are counted from its `excluded`; when its record holds fewer of the list's records than its `rejections`, as for a version published before `data/validation.json`, every one of its rejections is counted. | `excluded` is greater than `previous_excluded`. More records kept with a warning do not hold a list back: those entries are published. Until 2026-10-31 a rise in `rejected` did. |
+| `merged_duplicates` | `merged` and `previous`: how many records the source repeated and were merged into an entry (`merged_duplicates` in the manifest), in this version and in the version before, and `refuse_from`. `previous` is null when the version before's manifest has no `merged_duplicates`. | `merged` is at least `refuse_from` more than `previous`. |
+| `removals` | `removed`, `previous_entities` (the list's entries in the version before), `max_share_basis_points`, the largest share it may lose at once in hundredths of a percent (200 is 2%), and `refuse_from`. | `removed` is at least `refuse_from`, and more than that share of `previous_entities`. Until 2026-10-31 the share was 200 for every list, any number removed counted, and there was no `refuse_from`. |
+| `additions` | `added`, `previous_entities`, `max_share_basis_points`, the largest share of `previous_entities` it may gain at once, and `refuse_from`. | `added` is at least `refuse_from`, and more than that share of `previous_entities`. |
+| `in_force` | `listed` and `previous_listed`: how many entries are in force (`listed` in the manifest) in this version and in the version before, `max_share_basis_points`, the largest share of those in force it may lose at once, and `refuse_from`. Only for a list whose file keeps the entries it de-lists, so that it de-lists without removing anything. `previous_listed` is null when the version before's manifest has no `listed`. | `listed` is at least `refuse_from` below `previous_listed`, and below it by more than that share. |
+| `minimum_entities` | `entities`, the list's entries in this version, and `min_entities`, the fewest it may have. | `entities` is less than `min_entities`. |
+| `type_mix` | `entity_type`, the type whose share of the list moved most (the first in the order `entity_type` gives them under Entry when several moved as much), `share_basis_points` and `previous_share_basis_points`, its share of the list in this version and in the version before, rounded down, `max_shift_points`, how far any type's share may move, in percentage points, and `refuse_from`. The first three are null when the version before's manifest has no `entity_types`, or either version has no entries. | That type's share moved by more than `max_shift_points`, and some type gained or lost at least `refuse_from` entries. |
 | `data_as_of` | `data_as_of`, the publisher's date for this file, and `previous`, the date it is compared with: the last one read, which can be newer than the version before's when a daily check saw a re-dated file. Each is `YYYY-MM-DD` or null. | `data_as_of` is earlier than `previous`, or is null where `previous` was a full date. |
 
 | `outcome` | Meaning |
@@ -174,18 +229,25 @@ the same lists rebuilt and accepted, give the same bytes.
 could not be used, each as `list`, `locator` (where it is in the publisher's file,
 in a form that depends on the publisher) and `reason`, by list in the order the
 codes are given for `list` under Entry, then in the order the parser read them.
-For a list rebuilt in this version the two hold as many records as its
-`rejections` in the manifest.
+An entry with no name is known only once every record of its list is read and
+merged, so those come last in their list. For a list rebuilt in this version
+the two hold as many records as its `rejections` in the manifest.
 
 - `excluded`: this record of the publisher's file was not used. That is not
   always the same as the entry being absent from the data. SECO repeats some
   targets, and a copy with no listing record is excluded as a stale copy while
   the target is published from its other occurrence. A DFAT row naming a further
   name whose reference does not continue the entry above it is excluded, and the
-  entry it may belong to is published without that name.
+  entry it may belong to is published without that name. From 2026-10-31 an
+  entry with no name once its repeats are merged is excluded on every list,
+  with the locator `reference <publisher_reference>` and the reason `no name`,
+  as are a SECO target with no `ssid` and a DFAT row that has values but no
+  Reference.
 - `kept_with_warning`: the entry was published, but a detail of this record
   could not be read and is kept only as raw text, such as a UK date of birth with
-  no year.
+  no year. A reference merged into one that differs from it only in case (see
+  Publisher references) is listed here too, since its entry is published under
+  the first spelling.
 
 A list carried forward was not read, so its records are the ones the version
 before recorded for it, copied once that version's `data/validation.json` has
@@ -263,7 +325,7 @@ Every key is always present. Lists may be empty; scalars may be null.
 | `list` | string | One of `UNSC`, `SECO`, `OFAC-SDN`, `OFAC-CONSOLIDATED`, `THEUKLIST`, `EU-FINANCIAL-SANCTIONS`, `DFAT`, `CSEMA`. |
 | `entity_type` | string | `individual`, `entity`, `vessel` or `aircraft`. |
 | `publisher_reference` | string | The publisher's own identifier (see below). |
-| `names` | list | `value`; `type` (`primary`, `alias`, `former`, `variation`, `original_script`); `strength` (`strong`, `good`, `weak` or null, the publisher's own view of how reliable an alias is); `script` and `language` as the publisher states them; `normalized` (below); `publisher_reference`. |
+| `names` | list | Never empty: an entry with no name is left out (see Rejected records). `value`; `type` (`primary`, `alias`, `former`, `variation`, `original_script`); `strength` (`strong`, `good`, `weak` or null, the publisher's own view of how reliable an alias is); `script` and `language` as the publisher states them; `normalized` (below); `publisher_reference`. |
 | `dates_of_birth` | list | `raw` as printed; `year`, `month`, `day` when readable; `approximate`; `from`/`to` (`YYYY-MM-DD`) for a stated range. |
 | `places_of_birth` | list | `raw`, `city`, `region`, `country`, `country_iso2`. |
 | `nationalities` | list | `raw`, `iso2`. Nationality and citizenship both. |
@@ -288,6 +350,13 @@ OFAC: `entity@id`. UN: `DATAID`. EU: `logicalId`. UK: `UniqueID`. SECO: `ssid`.
 DFAT: the numeric `Reference`. Canada publishes no identifier, so its reference is
 derived: `<country>/<schedule or ->/<item>`, each part slugged. A renumbering by the
 publisher appears as a removal and an addition.
+
+No two entries of a list have references that differ only in case, so a
+consumer may compare them without case. From 2026-10-31, when a publisher's
+file has such a pair, the later record is merged into the first, the entry keeps
+the first spelling, and the later one is counted in `merged_duplicates` and
+listed under `kept_with_warning` (see Rejected records). None of the versions
+published to 2026.10.27 held such a pair.
 
 ### Canonical form and hash
 

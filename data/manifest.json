@@ -1,9 +1,9 @@
 {
     "schema_version": 1,
     "normalization_version": 1,
-    "version": "2026.11.01",
-    "previous_version": "2026.10.27",
-    "generated_at": "2026-11-01T00:51:31Z",
+    "version": "2026.11.03",
+    "previous_version": "2026.11.01",
+    "generated_at": "2026-11-03T03:25:06Z",
     "lists": {
         "UNSC": {
             "title": "UN Consolidated Sanctions",
@@ -11,10 +11,10 @@
             "url": "https://main.un.org/securitycouncil/en/content/un-sc-consolidated-list",
             "source": {
                 "file": "un-sc-consolidated.xml",
-                "sha256": "9104cf8495637693c0c05ec203fa45c8a50340f7127a0c5bd1616db92ea127cd",
+                "sha256": "ff4e4fba87f3690a87fdc1d2883c427b8d6f251a8f902668633df4db1984da80",
                 "bytes": 2177571,
-                "data_as_of": "2026-10-31",
-                "data_as_of_raw": "2026-10-31T23:00:07.052Z"
+                "data_as_of": "2026-11-02",
+                "data_as_of_raw": "2026-11-02T23:00:04.371Z"
             },
             "parser": {
                 "name": "UnscParser",
@@ -45,10 +45,10 @@
             "url": "https://www.seco.admin.ch/seco/en/home/Aussenwirtschaftspolitik_Wirtschaftliche_Zusammenarbeit/Wirtschaftsbeziehungen/exportkontrollen-und-sanktionen/sanktionen-embargos.html",
             "source": {
                 "file": "seco.xml",
-                "sha256": "52ab808917a5b2d812dc994501b7cc4d7c1d132eed45422d06b5d0e39dd35b51",
-                "bytes": 42361914,
-                "data_as_of": "2026-10-29",
-                "data_as_of_raw": "2026-10-29"
+                "sha256": "50c9e2c9ab0dc516adde4e9c13ee73db3d6da32c528c4ad02eabe0932bcfa655",
+                "bytes": 42384684,
+                "data_as_of": "2026-11-03",
+                "data_as_of_raw": "2026-11-03"
             },
             "parser": {
                 "name": "SecoParser",
@@ -67,8 +67,8 @@
             "files": [
                 {
                     "path": "data/SECO.ndjson",
-                    "sha256": "f84ae04732945bbd1ddbcbd837240475052c206162d875eaac03164704169a00",
-                    "bytes": 17760150
+                    "sha256": "77a9fa98aa92c9f3933addd5cc448c7d393f0780aeae36e3e60f84db2fff5a5e",
+                    "bytes": 17761182
                 }
             ],
             "carried_forward_from": null
@@ -215,10 +215,10 @@
             "url": "https://www.dfat.gov.au/international-relations/security/sanctions/consolidated-list",
             "source": {
                 "file": "dfat.xlsx",
-                "sha256": "e4648661f39a7e42ee806b9eb7f01d55dd1f14c0c2c94a0ceac70d2ccbc97cf2",
-                "bytes": 1347043,
-                "data_as_of": "2026-10-27",
-                "data_as_of_raw": "2026-10-27T03:30:39Z"
+                "sha256": "355204521102207b5af307e020489387a6f4d301cdfd94cebfdf3a0ece369691",
+                "bytes": 1339529,
+                "data_as_of": "2026-11-02",
+                "data_as_of_raw": "2026-11-02T05:56:40Z"
             },
             "parser": {
                 "name": "DfatXlsxParser",
@@ -237,8 +237,8 @@
             "files": [
                 {
                     "path": "data/DFAT.ndjson",
-                    "sha256": "335c893a5374a1d9f25ba3c63b94602db13aa6cddc044d11ced834bc1c9b4186",
-                    "bytes": 6318087
+                    "sha256": "6e5a58e27d6ae311a2aeb587012d4a78370964e54e17a2716a607a81bbb300fc",
+                    "bytes": 6318327
                 }
             ],
             "carried_forward_from": null
@@ -279,25 +279,25 @@
         }
     },
     "delta": {
-        "path": "deltas/2026.11.01.ndjson",
-        "sha256": "10be238b8ad73fdefacae6d7d6e1609a659de86e727d852fe102ce9bbb3ed4dc",
-        "bytes": 106298,
-        "added": 13,
-        "changed": 28,
-        "removed": 6
+        "path": "deltas/2026.11.03.ndjson",
+        "sha256": "f30b0b4bbc4551df11a847745824751aaddb06c58c8bab0513b32c9f1690fa30",
+        "bytes": 25372,
+        "added": 0,
+        "changed": 9,
+        "removed": 0
     },
     "changes": {
-        "added": 13,
-        "changed": 28,
-        "removed": 6
+        "added": 0,
+        "changed": 9,
+        "removed": 0
     },
     "files": {
         "data/CSEMA.ndjson": "de1392f20e483b3643c543f0e7b908d6dea554601b111f4af9d240526845c5ce",
-        "data/DFAT.ndjson": "335c893a5374a1d9f25ba3c63b94602db13aa6cddc044d11ced834bc1c9b4186",
+        "data/DFAT.ndjson": "6e5a58e27d6ae311a2aeb587012d4a78370964e54e17a2716a607a81bbb300fc",
         "data/EU-FINANCIAL-SANCTIONS.ndjson": "f5f7de21bd6dcbff37a4dec8a1ae8759fcd29b36e56be2fab8dd16e552aa2338",
         "data/OFAC-CONSOLIDATED.ndjson": "21dbd43463d50fa3467339d3e79540d1817a25b009f46798f7c6dc4daba8814a",
         "data/OFAC-SDN.ndjson": "aef10d682919553867080580613bf227635f25f948de0950e13f12bdb499a004",
-        "data/SECO.ndjson": "f84ae04732945bbd1ddbcbd837240475052c206162d875eaac03164704169a00",
+        "data/SECO.ndjson": "77a9fa98aa92c9f3933addd5cc448c7d393f0780aeae36e3e60f84db2fff5a5e",
         "data/THEUKLIST.ndjson": "2ea939b90231f859be7f76c9c0049572239544e54c4794d35a79851ec593d619",
         "data/UNSC.ndjson": "19f1a649cde4d0d2ce2497b516031b37f8896465708533efa0ff85839d4950f2",
         "deltas/2026.09.25.ndjson": "586fcf1e7afc8951b95ee9dc6e8de02bb653645257782cc9130ef6080f621f79",
@@ -319,12 +319,13 @@
         "deltas/2026.10.24.ndjson": "d843ef5558ca6597d9dd8828e88f3b0492c52e777866bfa25361aef6d3bb6a5d",
         "deltas/2026.10.25.ndjson": "2724b4f6e0a6d8b0c0fc9264583a5c460ef8501e8074c3f397da68070987c030",
         "deltas/2026.10.27.ndjson": "20db90da821f88b54c5591dcde832aa748d6d164326fd4c8a41d4970908ac4c1",
-        "deltas/2026.11.01.ndjson": "10be238b8ad73fdefacae6d7d6e1609a659de86e727d852fe102ce9bbb3ed4dc"
+        "deltas/2026.11.01.ndjson": "10be238b8ad73fdefacae6d7d6e1609a659de86e727d852fe102ce9bbb3ed4dc",
+        "deltas/2026.11.03.ndjson": "f30b0b4bbc4551df11a847745824751aaddb06c58c8bab0513b32c9f1690fa30"
     },
     "validation": {
         "path": "data/validation.json",
-        "sha256": "535b5cdb62651aad03073451af2bf5fb606c447a6c0e5407f67bcd3f595fe9aa",
-        "bytes": 7840
+        "sha256": "0a8a9c32c3285a04a86c8b3d001bd387afa7ac00fd802fb00d3064a433917894",
+        "bytes": 18479
     },
     "acceptances": []
 }
