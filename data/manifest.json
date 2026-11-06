@@ -1,9 +1,9 @@
 {
     "schema_version": 1,
     "normalization_version": 1,
-    "version": "2026.11.05",
-    "previous_version": "2026.11.04",
-    "generated_at": "2026-11-05T02:06:56Z",
+    "version": "2026.11.06",
+    "previous_version": "2026.11.05",
+    "generated_at": "2026-11-06T02:09:08Z",
     "lists": {
         "UNSC": {
             "title": "UN Consolidated Sanctions",
@@ -11,10 +11,10 @@
             "url": "https://main.un.org/securitycouncil/en/content/un-sc-consolidated-list",
             "source": {
                 "file": "un-sc-consolidated.xml",
-                "sha256": "26158f0c9fca5840ee1d3c31d342d29bfb2df3020f95de607f74e926fd30e536",
-                "bytes": 2177571,
-                "data_as_of": "2026-11-04",
-                "data_as_of_raw": "2026-11-04T23:00:07.687Z"
+                "sha256": "90c09c80b1a094db6d794ccc3eb7cdeb058b55ab4ebc0dd0a6f295dc03f30202",
+                "bytes": 2177566,
+                "data_as_of": "2026-11-06",
+                "data_as_of_raw": "2026-11-06T00:00:06.849Z"
             },
             "parser": {
                 "name": "UnscParser",
@@ -79,21 +79,21 @@
             "url": "https://sanctionslist.ofac.treas.gov/Home/SdnList",
             "source": {
                 "file": "ofac-sdn.xml",
-                "sha256": "d250541d87c7527f368622608749bf8c56a6e50932a039bb3feefa9b6349cced",
-                "bytes": 110405556,
-                "data_as_of": "2026-11-04",
-                "data_as_of_raw": "2026-11-04T00:00:00-05:00"
+                "sha256": "d4ddbe2afe6935b1fed9c877804cd0da21a692bb2ef103a8dc6b6a999dd3d5b4",
+                "bytes": 110658551,
+                "data_as_of": "2026-11-05",
+                "data_as_of_raw": "2026-11-05T00:00:00-05:00"
             },
             "parser": {
                 "name": "OfacEnhancedXmlParser",
                 "version": 1
             },
-            "entities": 19499,
-            "listed": 19499,
+            "entities": 19555,
+            "listed": 19555,
             "entity_types": {
-                "individual": 7534,
-                "entity": 10055,
-                "vessel": 1568,
+                "individual": 7541,
+                "entity": 10102,
+                "vessel": 1570,
                 "aircraft": 342
             },
             "merged_duplicates": 0,
@@ -101,8 +101,8 @@
             "files": [
                 {
                     "path": "data/OFAC-SDN.ndjson",
-                    "sha256": "adc190a3b41b2abe43121aa8af36cc6205b15bd5cec47820a627f5febe49818e",
-                    "bytes": 32464992
+                    "sha256": "479ae9554905ce273545edf8bb8852983f51f05d6111d62172bf68307f17b6e8",
+                    "bytes": 32543001
                 }
             ],
             "carried_forward_from": null
@@ -113,10 +113,10 @@
             "url": "https://sanctionslist.ofac.treas.gov/Home/ConsolidatedList",
             "source": {
                 "file": "ofac-consolidated.xml",
-                "sha256": "489f58a118c95b67d613c231a3fbe7cf44195eff1c3928f5f2fb6cc6fb533ced",
-                "bytes": 3870811,
+                "sha256": "ddc83d35bc835d7b1b3d677ff7714398adc10e535cd1bc70aa9b7204fb05f968",
+                "bytes": 3871288,
                 "data_as_of": "2026-11-04",
-                "data_as_of_raw": "2026-11-04T00:00:00-05:00"
+                "data_as_of_raw": "2026-11-04T00:00:00"
             },
             "parser": {
                 "name": "OfacEnhancedXmlParser",
@@ -279,16 +279,16 @@
         }
     },
     "delta": {
-        "path": "deltas/2026.11.05.ndjson",
-        "sha256": "0a6fc453748b038657d4e79cfbb4f59c2880fd50698323a0fadc813edfa724ea",
-        "bytes": 1892911,
-        "added": 20,
-        "changed": 1081,
+        "path": "deltas/2026.11.06.ndjson",
+        "sha256": "b57a8573258bc8ab5f89c29aeef92d330e46808ae890b3691dba4d0a203d9aa3",
+        "bytes": 90975,
+        "added": 56,
+        "changed": 5,
         "removed": 0
     },
     "changes": {
-        "added": 20,
-        "changed": 1081,
+        "added": 56,
+        "changed": 5,
         "removed": 0
     },
     "files": {
@@ -296,7 +296,7 @@
         "data/DFAT.ndjson": "bb7d195d7045de7de113c588362fbd72e2c474dc99776e824103990a13687651",
         "data/EU-FINANCIAL-SANCTIONS.ndjson": "f5f7de21bd6dcbff37a4dec8a1ae8759fcd29b36e56be2fab8dd16e552aa2338",
         "data/OFAC-CONSOLIDATED.ndjson": "01ba0353af41d77815f881b9da9c1ae88d101574e96fb8febf11f9fd0ee5edd0",
-        "data/OFAC-SDN.ndjson": "adc190a3b41b2abe43121aa8af36cc6205b15bd5cec47820a627f5febe49818e",
+        "data/OFAC-SDN.ndjson": "479ae9554905ce273545edf8bb8852983f51f05d6111d62172bf68307f17b6e8",
         "data/SECO.ndjson": "e42ecf5ea55f78a94732f6bdd47350fe34f4f458327eb01a8e5e0af5a7ddf6a7",
         "data/THEUKLIST.ndjson": "4102f4c6a89b9a3982ccaa1c2f0b36182818ba21e25716c2f0af7cdf402d6ba6",
         "data/UNSC.ndjson": "19f1a649cde4d0d2ce2497b516031b37f8896465708533efa0ff85839d4950f2",
@@ -322,11 +322,12 @@
         "deltas/2026.11.01.ndjson": "10be238b8ad73fdefacae6d7d6e1609a659de86e727d852fe102ce9bbb3ed4dc",
         "deltas/2026.11.03.ndjson": "f30b0b4bbc4551df11a847745824751aaddb06c58c8bab0513b32c9f1690fa30",
         "deltas/2026.11.04.ndjson": "76aaf56f0ced1d752aed92c7301534c25be1c7d635fa17d1a7084c009ba57270",
-        "deltas/2026.11.05.ndjson": "0a6fc453748b038657d4e79cfbb4f59c2880fd50698323a0fadc813edfa724ea"
+        "deltas/2026.11.05.ndjson": "0a6fc453748b038657d4e79cfbb4f59c2880fd50698323a0fadc813edfa724ea",
+        "deltas/2026.11.06.ndjson": "b57a8573258bc8ab5f89c29aeef92d330e46808ae890b3691dba4d0a203d9aa3"
     },
     "validation": {
         "path": "data/validation.json",
-        "sha256": "3355e95791c5d8202b74eff9c897ddd582a57f0262e639773aa6ac5132e931cd",
+        "sha256": "2cbab8bfbafb153b39faa378713c7b349040b0832158b6bae7bcf1016b3d94f4",
         "bytes": 18476
     },
     "acceptances": []
