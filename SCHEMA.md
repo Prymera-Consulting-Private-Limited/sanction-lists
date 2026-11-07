@@ -8,7 +8,7 @@ Schema version 1. Name normalisation version 1.
 | --- | --- |
 | `latest.json` | The current version: `version`, `tag`, `previous_version`, `generated_at`, `checked_at`, `manifest_sha256`, `sources`, how fresh each list is (see Freshness), and `withdrawn`, every version the publisher has withdrawn (see Withdrawn versions). |
 | `versions.json` | Every version in order, oldest first, each with its delta's path, sha256 and counts. A withdrawn version keeps its entry, marked `"withdrawn": true`. |
-| `data/manifest.json` | For one version: per list, the source file it was built from (name, sha256, size, the publisher's "data as of" date), the code that built it (`parser`, see Parser versions), the number of entries (`entities`), how many of them are in force (`listed`: those without `delisted_on`), how many are of each `entity_type` (`entity_types`), how many records the source repeated and were merged into an entry, a reference differing from an earlier one only in case among them (`merged_duplicates`), the number of rejected records, the data files with their sha256, and `carried_forward_from` when the list was not rebuilt in this version. `files` maps every data and delta file to its sha256. `validation` gives the path, sha256 and size of the version's `data/validation.json`, and `acceptances` who accepted a list a check would have held back, and why (see Validation). Older manifests lack `listed`, `entity_types` and `merged_duplicates`, and so does a list carried forward from one of them. Manifests published before `validation` and `acceptances` existed lack both. |
+| `data/manifest.json` | For one version: per list, the source file it was built from (name, sha256, size, the publisher's "data as of" date), the code that built it (`parser`, see Parser versions), the number of entries (`entities`), how many of them are in force (`listed`: those without `delisted_on`), how many are of each `entity_type` (`entity_types`), how many records the source repeated and were merged into an entry, a reference differing from an earlier one only in case among them (`merged_duplicates`), the number of rejected records, the data files with their sha256, and `carried_forward_from` when the list was not rebuilt in this version. `files` maps every data and delta file to its sha256. `validation` gives the path, sha256 and size of the version's `data/validation.json`, and `acceptances` who accepted a list a check would have held back, and why (see Validation). `provenance` names the build that published the version (see Provenance). Older manifests lack `listed`, `entity_types` and `merged_duplicates`, and so does a list carried forward from one of them. Manifests published before `validation` and `acceptances` existed lack both, and those published before `provenance` existed lack it. |
 | `data/validation.json` | How one version was checked before it was published, and every record in the publishers' files that could not be used (see Validation). It belongs to a version only through that version's manifest. |
 | `data/<CODE>.ndjson` | The full current snapshot of one list, one entry per line, ordered by `id` compared byte by byte (`UNSC:10` comes before `UNSC:9`). |
 | `deltas/<version>.ndjson` | What changed in that version, one operation per line. The lines are grouped by list, in the order the codes are given for `list` under Entry, and ordered by `id` within each list as in a snapshot. That list order is not alphabetical, so the file as a whole need not be in `id` order. A list that did not change has no lines. |
@@ -274,6 +274,23 @@ and is empty when nobody accepted anything:
 The version's commit message carries the same, one line per list. A version is
 published whenever a person accepted a list, even when no entry changed: its delta
 is then empty.
+
+## Provenance
+
+`provenance` in the manifest names the build that published the version:
+
+| Field | What it is |
+| --- | --- |
+| `run_id` | The workflow run that built the version, as a number. |
+| `run_attempt` | Which attempt of that run built it, from 1. A run that is re-run keeps its `run_id` and counts up its attempt. |
+| `console_commit` | The full sha1 of the publisher's code that built it. |
+| `sbom_sha256` | The sha256 of the CycloneDX bill of materials of that code: the packages it ran with, each at its version. The publisher keeps the file; it is not published. Two versions with the same `sbom_sha256` were built by the same code with the same packages. |
+
+All four are internal references, which readers outside the publisher cannot
+look up; they let the publisher find the run, the source files it kept, the
+code that ran and the packages it ran with. All four are null when the version
+was published outside a workflow run. Manifests published before `provenance`
+existed lack it.
 
 ## Signatures
 
