@@ -1,65 +1,65 @@
 {
     "schema_version": 1,
-    "version": "2026.11.07",
-    "tag": "v2026.11.07",
-    "previous_version": "2026.11.06",
-    "generated_at": "2026-11-07T01:45:22Z",
-    "checked_at": "2026-11-09T11:21:05Z",
-    "manifest_sha256": "716f264942afda4132b86bf6eb11cf7f38227621160fa4ea8adf3b3e504a2777",
+    "version": "2026.11.10",
+    "tag": "v2026.11.10",
+    "previous_version": "2026.11.07",
+    "generated_at": "2026-11-10T04:01:50Z",
+    "checked_at": "2026-11-10T04:01:50Z",
+    "manifest_sha256": "571905a12515ac4d06b3d95eb042991e9018a57ee37d4323c60191e1ef685713",
     "sources": {
         "UNSC": {
-            "checked_at": "2026-11-09T11:21:05Z",
-            "data_as_of": "2026-11-08",
+            "checked_at": "2026-11-10T04:01:50Z",
+            "data_as_of": "2026-11-10",
             "last_changed_in": "2026.11.01",
             "max_data_age_days": 21,
             "max_unchanged_days": null
         },
         "SECO": {
-            "checked_at": "2026-11-09T11:21:05Z",
+            "checked_at": "2026-11-10T04:01:50Z",
             "data_as_of": "2026-11-04",
             "last_changed_in": "2026.11.07",
             "max_data_age_days": 60,
             "max_unchanged_days": null
         },
         "OFAC-SDN": {
-            "checked_at": "2026-11-09T11:21:05Z",
-            "data_as_of": "2026-11-06",
-            "last_changed_in": "2026.11.07",
+            "checked_at": "2026-11-10T04:01:50Z",
+            "data_as_of": "2026-11-09",
+            "last_changed_in": "2026.11.10",
             "max_data_age_days": 21,
             "max_unchanged_days": null
         },
         "OFAC-CONSOLIDATED": {
-            "checked_at": "2026-11-09T11:21:05Z",
+            "checked_at": "2026-11-10T04:01:50Z",
             "data_as_of": "2026-11-04",
             "last_changed_in": "2026.11.05",
             "max_data_age_days": 180,
             "max_unchanged_days": null
         },
         "THEUKLIST": {
-            "checked_at": "2026-11-09T11:21:05Z",
+            "checked_at": "2026-11-10T04:01:50Z",
             "data_as_of": "2026-11-03",
             "last_changed_in": "2026.11.04",
             "max_data_age_days": 30,
             "max_unchanged_days": null
         },
         "EU-FINANCIAL-SANCTIONS": {
-            "checked_at": "2026-11-09T11:21:05Z",
+            "checked_at": "2026-11-10T04:01:50Z",
             "data_as_of": "2026-10-23",
             "last_changed_in": "2026.10.24",
             "max_data_age_days": 45,
             "max_unchanged_days": null
         },
         "DFAT": {
-            "checked_at": "2026-11-09T11:21:05Z",
+            "checked_at": "2026-11-10T04:01:50Z",
             "data_as_of": "2026-11-03",
             "last_changed_in": "2026.11.05",
             "max_data_age_days": 45,
             "max_unchanged_days": null
         },
         "CSEMA": {
-            "checked_at": "2026-11-09T11:21:05Z",
+            "checked_at": "2026-11-10T04:01:50Z",
             "data_as_of": null,
-            "last_changed_in": "2026.10.17",
+            "last_changed_in": "2026.11.10",
             "max_data_age_days": null,
             "max_unchanged_days": 90
         }

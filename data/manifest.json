@@ -1,9 +1,9 @@
 {
     "schema_version": 1,
     "normalization_version": 1,
-    "version": "2026.11.07",
-    "previous_version": "2026.11.06",
-    "generated_at": "2026-11-07T01:45:22Z",
+    "version": "2026.11.10",
+    "previous_version": "2026.11.07",
+    "generated_at": "2026-11-10T04:01:50Z",
     "lists": {
         "UNSC": {
             "title": "UN Consolidated Sanctions",
@@ -11,10 +11,10 @@
             "url": "https://main.un.org/securitycouncil/en/content/un-sc-consolidated-list",
             "source": {
                 "file": "un-sc-consolidated.xml",
-                "sha256": "f9598639f9b0252fc70fc8815319d59e96f692f0e9d1a5ee3a610b05dbf70148",
+                "sha256": "93c239ab2ceee5e12951f94f3c556501e99074f0c129c7368a4ca4d3f8abd5aa",
                 "bytes": 2177566,
-                "data_as_of": "2026-11-07",
-                "data_as_of_raw": "2026-11-07T00:00:02.322Z"
+                "data_as_of": "2026-11-10",
+                "data_as_of_raw": "2026-11-10T00:00:03.333Z"
             },
             "parser": {
                 "name": "UnscParser",
@@ -79,10 +79,10 @@
             "url": "https://sanctionslist.ofac.treas.gov/Home/SdnList",
             "source": {
                 "file": "ofac-sdn.xml",
-                "sha256": "ae85a40c5918d00d53ca2c809508746d2239935de5f1cbbf2230973deeb60fea",
-                "bytes": 110727963,
-                "data_as_of": "2026-11-06",
-                "data_as_of_raw": "2026-11-06T00:00:00-05:00"
+                "sha256": "b74d80270db03ff92e5c23da930ac9f3f3aaafb6609c6cec3ca08fd8ef14081c",
+                "bytes": 110727954,
+                "data_as_of": "2026-11-09",
+                "data_as_of_raw": "2026-11-09T00:00:00-05:00"
             },
             "parser": {
                 "name": "OfacEnhancedXmlParser",
@@ -101,8 +101,8 @@
             "files": [
                 {
                     "path": "data/OFAC-SDN.ndjson",
-                    "sha256": "7497d69ee28b92b73425a6af5833b995dc632d9bbd17fa0608879eeae5c41053",
-                    "bytes": 32562382
+                    "sha256": "7f0ea0c80e105e2a055be108837ec5f04eedd383d8fae9ddae694d02c2d8a7bb",
+                    "bytes": 32562376
                 }
             ],
             "carried_forward_from": null
@@ -249,8 +249,8 @@
             "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
             "source": {
                 "file": "canada-sema-lmes.xml",
-                "sha256": "61a9064720d9f35884ead9387158b708882d63c615981034cb9557d038d55bcf",
-                "bytes": 2891117,
+                "sha256": "d44c33444e0a10f0166e4b962ed7abc42582aa1678768cafd352bcf0740035b4",
+                "bytes": 2918344,
                 "data_as_of": null,
                 "data_as_of_raw": null
             },
@@ -258,11 +258,11 @@
                 "name": "CsemaParser",
                 "version": 1
             },
-            "entities": 5708,
-            "listed": 5708,
+            "entities": 5770,
+            "listed": 5770,
             "entity_types": {
-                "individual": 3527,
-                "entity": 1450,
+                "individual": 3551,
+                "entity": 1488,
                 "vessel": 731,
                 "aircraft": 0
             },
@@ -271,32 +271,32 @@
             "files": [
                 {
                     "path": "data/CSEMA.ndjson",
-                    "sha256": "de1392f20e483b3643c543f0e7b908d6dea554601b111f4af9d240526845c5ce",
-                    "bytes": 5940423
+                    "sha256": "c47a129d4dc789fc6a86d298a5b89244cda414cb653f024f6bda0beddd987fa4",
+                    "bytes": 6006909
                 }
             ],
             "carried_forward_from": null
         }
     },
     "delta": {
-        "path": "deltas/2026.11.07.ndjson",
-        "sha256": "5e5f4795daac0399dde47ce9080919e305570628a78ee49fdea44922f7b9ecad",
-        "bytes": 76230,
-        "added": 27,
-        "changed": 0,
-        "removed": 0
+        "path": "deltas/2026.11.10.ndjson",
+        "sha256": "f91aa53743659ba9f214209b899c3ef0173e48eacf1910771e1dcecda7253bc7",
+        "bytes": 87053,
+        "added": 66,
+        "changed": 6,
+        "removed": 4
     },
     "changes": {
-        "added": 27,
-        "changed": 0,
-        "removed": 0
+        "added": 66,
+        "changed": 6,
+        "removed": 4
     },
     "files": {
-        "data/CSEMA.ndjson": "de1392f20e483b3643c543f0e7b908d6dea554601b111f4af9d240526845c5ce",
+        "data/CSEMA.ndjson": "c47a129d4dc789fc6a86d298a5b89244cda414cb653f024f6bda0beddd987fa4",
         "data/DFAT.ndjson": "bb7d195d7045de7de113c588362fbd72e2c474dc99776e824103990a13687651",
         "data/EU-FINANCIAL-SANCTIONS.ndjson": "f5f7de21bd6dcbff37a4dec8a1ae8759fcd29b36e56be2fab8dd16e552aa2338",
         "data/OFAC-CONSOLIDATED.ndjson": "01ba0353af41d77815f881b9da9c1ae88d101574e96fb8febf11f9fd0ee5edd0",
-        "data/OFAC-SDN.ndjson": "7497d69ee28b92b73425a6af5833b995dc632d9bbd17fa0608879eeae5c41053",
+        "data/OFAC-SDN.ndjson": "7f0ea0c80e105e2a055be108837ec5f04eedd383d8fae9ddae694d02c2d8a7bb",
         "data/SECO.ndjson": "940830ec3d58be6fd034cfde12fb0708c7d175234c774d2c1142795348dbc26e",
         "data/THEUKLIST.ndjson": "4102f4c6a89b9a3982ccaa1c2f0b36182818ba21e25716c2f0af7cdf402d6ba6",
         "data/UNSC.ndjson": "19f1a649cde4d0d2ce2497b516031b37f8896465708533efa0ff85839d4950f2",
@@ -324,18 +324,19 @@
         "deltas/2026.11.04.ndjson": "76aaf56f0ced1d752aed92c7301534c25be1c7d635fa17d1a7084c009ba57270",
         "deltas/2026.11.05.ndjson": "0a6fc453748b038657d4e79cfbb4f59c2880fd50698323a0fadc813edfa724ea",
         "deltas/2026.11.06.ndjson": "b57a8573258bc8ab5f89c29aeef92d330e46808ae890b3691dba4d0a203d9aa3",
-        "deltas/2026.11.07.ndjson": "5e5f4795daac0399dde47ce9080919e305570628a78ee49fdea44922f7b9ecad"
+        "deltas/2026.11.07.ndjson": "5e5f4795daac0399dde47ce9080919e305570628a78ee49fdea44922f7b9ecad",
+        "deltas/2026.11.10.ndjson": "f91aa53743659ba9f214209b899c3ef0173e48eacf1910771e1dcecda7253bc7"
     },
     "validation": {
         "path": "data/validation.json",
-        "sha256": "6df00fcdcce414254ff28713c96a536d634c8272d28c998fcba60948088bc0de",
-        "bytes": 18472
+        "sha256": "e2589ea19f885bf6e6e307d106f7d7cdd2965ce8d374b068ce09871bea2fac21",
+        "bytes": 18476
     },
     "acceptances": [],
     "provenance": {
-        "run_id": 42325565205,
+        "run_id": 42752954273,
         "run_attempt": 1,
-        "console_commit": "42612a8a79f5a38bc17169281a307ab102ce195a",
-        "sbom_sha256": "ef4ef6c5d0676c97a6e9aeef0f63db960ba7e8ffc5885c6cbe86d669163612bf"
+        "console_commit": "cdbf9b99c17d1aaf9d2a89833653a968869b220c",
+        "sbom_sha256": "65dc2f94b3b2d4f0bf23f6c871e441958c38c30b19f9c306e3d5ed5eb6af5de6"
     }
 }
