@@ -5,7 +5,7 @@
             "check": "delta_replay",
             "outcome": "passed",
             "figures": {
-                "against": "2026.11.07"
+                "against": "2026.11.10"
             }
         },
         {
@@ -13,7 +13,7 @@
             "check": "delta_replay",
             "outcome": "passed",
             "figures": {
-                "against": "2026.11.07"
+                "against": "2026.11.10"
             }
         },
         {
@@ -21,7 +21,7 @@
             "check": "delta_replay",
             "outcome": "passed",
             "figures": {
-                "against": "2026.11.07"
+                "against": "2026.11.10"
             }
         },
         {
@@ -29,7 +29,7 @@
             "check": "delta_replay",
             "outcome": "passed",
             "figures": {
-                "against": "2026.11.07"
+                "against": "2026.11.10"
             }
         },
         {
@@ -37,7 +37,7 @@
             "check": "delta_replay",
             "outcome": "passed",
             "figures": {
-                "against": "2026.11.07"
+                "against": "2026.11.10"
             }
         },
         {
@@ -45,7 +45,7 @@
             "check": "delta_replay",
             "outcome": "passed",
             "figures": {
-                "against": "2026.11.07"
+                "against": "2026.11.10"
             }
         },
         {
@@ -53,7 +53,7 @@
             "check": "delta_replay",
             "outcome": "passed",
             "figures": {
-                "against": "2026.11.07"
+                "against": "2026.11.10"
             }
         },
         {
@@ -61,7 +61,7 @@
             "check": "delta_replay",
             "outcome": "passed",
             "figures": {
-                "against": "2026.11.07"
+                "against": "2026.11.10"
             }
         },
         {
@@ -133,8 +133,8 @@
             "check": "data_as_of",
             "outcome": "passed",
             "figures": {
-                "data_as_of": "2026-11-10",
-                "previous": "2026-11-08"
+                "data_as_of": "2026-11-11",
+                "previous": "2026-11-10"
             }
         },
         {
@@ -291,7 +291,7 @@
             "outcome": "passed",
             "figures": {
                 "data_as_of": "2026-11-09",
-                "previous": "2026-11-06"
+                "previous": "2026-11-09"
             }
         },
         {
@@ -436,7 +436,7 @@
             "check": "data_as_of",
             "outcome": "passed",
             "figures": {
-                "data_as_of": "2026-11-03",
+                "data_as_of": "2026-11-10",
                 "previous": "2026-11-03"
             }
         },
@@ -612,8 +612,8 @@
             "check": "removals",
             "outcome": "passed",
             "figures": {
-                "removed": 4,
-                "previous_entities": 5708,
+                "removed": 0,
+                "previous_entities": 5770,
                 "max_share_basis_points": 50,
                 "refuse_from": 10
             }
@@ -623,8 +623,8 @@
             "check": "additions",
             "outcome": "passed",
             "figures": {
-                "added": 66,
-                "previous_entities": 5708,
+                "added": 11,
+                "previous_entities": 5770,
                 "max_share_basis_points": 500,
                 "refuse_from": 10
             }
@@ -634,7 +634,7 @@
             "check": "minimum_entities",
             "outcome": "passed",
             "figures": {
-                "entities": 5770,
+                "entities": 5781,
                 "min_entities": 5128
             }
         },
@@ -644,8 +644,8 @@
             "outcome": "passed",
             "figures": {
                 "entity_type": "entity",
-                "share_basis_points": 2578,
-                "previous_share_basis_points": 2540,
+                "share_basis_points": 2592,
+                "previous_share_basis_points": 2578,
                 "max_shift_points": 5,
                 "refuse_from": 10
             }
