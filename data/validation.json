@@ -5,7 +5,7 @@
             "check": "delta_replay",
             "outcome": "passed",
             "figures": {
-                "against": "2026.11.10"
+                "against": "2026.11.11"
             }
         },
         {
@@ -13,7 +13,7 @@
             "check": "delta_replay",
             "outcome": "passed",
             "figures": {
-                "against": "2026.11.10"
+                "against": "2026.11.11"
             }
         },
         {
@@ -21,7 +21,7 @@
             "check": "delta_replay",
             "outcome": "passed",
             "figures": {
-                "against": "2026.11.10"
+                "against": "2026.11.11"
             }
         },
         {
@@ -29,7 +29,7 @@
             "check": "delta_replay",
             "outcome": "passed",
             "figures": {
-                "against": "2026.11.10"
+                "against": "2026.11.11"
             }
         },
         {
@@ -37,7 +37,7 @@
             "check": "delta_replay",
             "outcome": "passed",
             "figures": {
-                "against": "2026.11.10"
+                "against": "2026.11.11"
             }
         },
         {
@@ -45,7 +45,7 @@
             "check": "delta_replay",
             "outcome": "passed",
             "figures": {
-                "against": "2026.11.10"
+                "against": "2026.11.11"
             }
         },
         {
@@ -53,7 +53,7 @@
             "check": "delta_replay",
             "outcome": "passed",
             "figures": {
-                "against": "2026.11.10"
+                "against": "2026.11.11"
             }
         },
         {
@@ -61,7 +61,7 @@
             "check": "delta_replay",
             "outcome": "passed",
             "figures": {
-                "against": "2026.11.10"
+                "against": "2026.11.11"
             }
         },
         {
@@ -90,7 +90,7 @@
             "check": "removals",
             "outcome": "passed",
             "figures": {
-                "removed": 0,
+                "removed": 1,
                 "previous_entities": 1007,
                 "max_share_basis_points": 89,
                 "refuse_from": 10
@@ -101,7 +101,7 @@
             "check": "additions",
             "outcome": "passed",
             "figures": {
-                "added": 0,
+                "added": 1,
                 "previous_entities": 1007,
                 "max_share_basis_points": 500,
                 "refuse_from": 10
@@ -133,8 +133,8 @@
             "check": "data_as_of",
             "outcome": "passed",
             "figures": {
-                "data_as_of": "2026-11-11",
-                "previous": "2026-11-10"
+                "data_as_of": "2026-11-12",
+                "previous": "2026-11-11"
             }
         },
         {
@@ -437,7 +437,7 @@
             "outcome": "passed",
             "figures": {
                 "data_as_of": "2026-11-10",
-                "previous": "2026-11-03"
+                "previous": "2026-11-10"
             }
         },
         {
@@ -613,7 +613,7 @@
             "outcome": "passed",
             "figures": {
                 "removed": 0,
-                "previous_entities": 5770,
+                "previous_entities": 5781,
                 "max_share_basis_points": 50,
                 "refuse_from": 10
             }
@@ -623,8 +623,8 @@
             "check": "additions",
             "outcome": "passed",
             "figures": {
-                "added": 11,
-                "previous_entities": 5770,
+                "added": 0,
+                "previous_entities": 5781,
                 "max_share_basis_points": 500,
                 "refuse_from": 10
             }
@@ -643,9 +643,9 @@
             "check": "type_mix",
             "outcome": "passed",
             "figures": {
-                "entity_type": "entity",
-                "share_basis_points": 2592,
-                "previous_share_basis_points": 2578,
+                "entity_type": "individual",
+                "share_basis_points": 6142,
+                "previous_share_basis_points": 6142,
                 "max_shift_points": 5,
                 "refuse_from": 10
             }
