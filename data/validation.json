@@ -5,7 +5,7 @@
             "check": "delta_replay",
             "outcome": "passed",
             "figures": {
-                "against": "2026.11.13"
+                "against": "2026.11.14"
             }
         },
         {
@@ -13,7 +13,7 @@
             "check": "delta_replay",
             "outcome": "passed",
             "figures": {
-                "against": "2026.11.13"
+                "against": "2026.11.14"
             }
         },
         {
@@ -21,7 +21,7 @@
             "check": "delta_replay",
             "outcome": "passed",
             "figures": {
-                "against": "2026.11.13"
+                "against": "2026.11.14"
             }
         },
         {
@@ -29,7 +29,7 @@
             "check": "delta_replay",
             "outcome": "passed",
             "figures": {
-                "against": "2026.11.13"
+                "against": "2026.11.14"
             }
         },
         {
@@ -37,7 +37,7 @@
             "check": "delta_replay",
             "outcome": "passed",
             "figures": {
-                "against": "2026.11.13"
+                "against": "2026.11.14"
             }
         },
         {
@@ -45,7 +45,7 @@
             "check": "delta_replay",
             "outcome": "passed",
             "figures": {
-                "against": "2026.11.13"
+                "against": "2026.11.14"
             }
         },
         {
@@ -53,7 +53,7 @@
             "check": "delta_replay",
             "outcome": "passed",
             "figures": {
-                "against": "2026.11.13"
+                "against": "2026.11.14"
             }
         },
         {
@@ -61,7 +61,7 @@
             "check": "delta_replay",
             "outcome": "passed",
             "figures": {
-                "against": "2026.11.13"
+                "against": "2026.11.14"
             }
         },
         {
@@ -133,8 +133,8 @@
             "check": "data_as_of",
             "outcome": "passed",
             "figures": {
-                "data_as_of": "2026-11-14",
-                "previous": "2026-11-13"
+                "data_as_of": "2026-11-17",
+                "previous": "2026-11-15"
             }
         },
         {
@@ -218,7 +218,7 @@
             "outcome": "passed",
             "figures": {
                 "data_as_of": "2026-11-11",
-                "previous": "2026-11-04"
+                "previous": "2026-11-11"
             }
         },
         {
@@ -248,7 +248,7 @@
             "outcome": "passed",
             "figures": {
                 "removed": 0,
-                "previous_entities": 19563,
+                "previous_entities": 19565,
                 "max_share_basis_points": 192,
                 "refuse_from": 10
             }
@@ -258,8 +258,8 @@
             "check": "additions",
             "outcome": "passed",
             "figures": {
-                "added": 2,
-                "previous_entities": 19563,
+                "added": 0,
+                "previous_entities": 19565,
                 "max_share_basis_points": 500,
                 "refuse_from": 10
             }
@@ -278,9 +278,9 @@
             "check": "type_mix",
             "outcome": "passed",
             "figures": {
-                "entity_type": "entity",
-                "share_basis_points": 5168,
-                "previous_share_basis_points": 5167,
+                "entity_type": "individual",
+                "share_basis_points": 3854,
+                "previous_share_basis_points": 3854,
                 "max_shift_points": 5,
                 "refuse_from": 10
             }
@@ -291,7 +291,7 @@
             "outcome": "passed",
             "figures": {
                 "data_as_of": "2026-11-13",
-                "previous": "2026-11-09"
+                "previous": "2026-11-13"
             }
         },
         {
@@ -539,8 +539,8 @@
             "check": "removals",
             "outcome": "passed",
             "figures": {
-                "removed": 1,
-                "previous_entities": 4015,
+                "removed": 0,
+                "previous_entities": 4014,
                 "max_share_basis_points": 50,
                 "refuse_from": 10
             }
@@ -551,7 +551,7 @@
             "outcome": "passed",
             "figures": {
                 "added": 0,
-                "previous_entities": 4015,
+                "previous_entities": 4014,
                 "max_share_basis_points": 814,
                 "refuse_from": 10
             }
@@ -570,9 +570,9 @@
             "check": "type_mix",
             "outcome": "passed",
             "figures": {
-                "entity_type": "entity",
-                "share_basis_points": 2683,
-                "previous_share_basis_points": 2684,
+                "entity_type": "individual",
+                "share_basis_points": 6422,
+                "previous_share_basis_points": 6422,
                 "max_shift_points": 5,
                 "refuse_from": 10
             }
@@ -582,8 +582,8 @@
             "check": "data_as_of",
             "outcome": "passed",
             "figures": {
-                "data_as_of": "2026-11-13",
-                "previous": "2026-11-03"
+                "data_as_of": "2026-11-16",
+                "previous": "2026-11-13"
             }
         },
         {
