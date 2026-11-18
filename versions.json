@@ -439,5 +439,19 @@
             "changed": 2,
             "removed": 0
         }
+    },
+    {
+        "version": "2026.11.18",
+        "tag": "v2026.11.18",
+        "previous_version": "2026.11.17",
+        "generated_at": "2026-11-18T03:29:03Z",
+        "delta": {
+            "path": "deltas/2026.11.18.ndjson",
+            "sha256": "6adc19ef585096cd672cbd010128d3b95f7185b7d883146d1196f969f5d73569",
+            "bytes": 50905,
+            "added": 16,
+            "changed": 7,
+            "removed": 0
+        }
     }
 ]
