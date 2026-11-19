@@ -1,5 +1,5 @@
 {
     "algorithm": "ed25519",
     "key_id": "08e25c1704f9f816",
-    "signature": "oqpk2+tIH2UOGfuOiA2EACCJCfg/+LzbKR/+1q+VvtI1tfThF+SsVneoqccrXLjY70lYokirn70k+Ezf1uOVCg=="
+    "signature": "rNrCz/ucb+xxUqaQ7ts4VnO/kTwA4YRPb5RZu4mTiFYD3TrB6iX9Hk5qsoB7z0n5sbA2rRZODMeiO+ALmsTTCg=="
 }
