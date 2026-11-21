@@ -5,7 +5,7 @@
             "check": "delta_replay",
             "outcome": "passed",
             "figures": {
-                "against": "2026.11.19"
+                "against": "2026.11.20"
             }
         },
         {
@@ -13,7 +13,7 @@
             "check": "delta_replay",
             "outcome": "passed",
             "figures": {
-                "against": "2026.11.19"
+                "against": "2026.11.20"
             }
         },
         {
@@ -21,7 +21,7 @@
             "check": "delta_replay",
             "outcome": "passed",
             "figures": {
-                "against": "2026.11.19"
+                "against": "2026.11.20"
             }
         },
         {
@@ -29,7 +29,7 @@
             "check": "delta_replay",
             "outcome": "passed",
             "figures": {
-                "against": "2026.11.19"
+                "against": "2026.11.20"
             }
         },
         {
@@ -37,7 +37,7 @@
             "check": "delta_replay",
             "outcome": "passed",
             "figures": {
-                "against": "2026.11.19"
+                "against": "2026.11.20"
             }
         },
         {
@@ -45,7 +45,7 @@
             "check": "delta_replay",
             "outcome": "passed",
             "figures": {
-                "against": "2026.11.19"
+                "against": "2026.11.20"
             }
         },
         {
@@ -53,7 +53,7 @@
             "check": "delta_replay",
             "outcome": "passed",
             "figures": {
-                "against": "2026.11.19"
+                "against": "2026.11.20"
             }
         },
         {
@@ -61,7 +61,7 @@
             "check": "delta_replay",
             "outcome": "passed",
             "figures": {
-                "against": "2026.11.19"
+                "against": "2026.11.20"
             }
         },
         {
@@ -133,8 +133,8 @@
             "check": "data_as_of",
             "outcome": "passed",
             "figures": {
-                "data_as_of": "2026-11-20",
-                "previous": "2026-11-19"
+                "data_as_of": "2026-11-21",
+                "previous": "2026-11-20"
             }
         },
         {
@@ -248,7 +248,7 @@
             "outcome": "passed",
             "figures": {
                 "removed": 0,
-                "previous_entities": 19571,
+                "previous_entities": 19595,
                 "max_share_basis_points": 192,
                 "refuse_from": 10
             }
@@ -258,8 +258,8 @@
             "check": "additions",
             "outcome": "passed",
             "figures": {
-                "added": 24,
-                "previous_entities": 19571,
+                "added": 4,
+                "previous_entities": 19595,
                 "max_share_basis_points": 500,
                 "refuse_from": 10
             }
@@ -269,7 +269,7 @@
             "check": "minimum_entities",
             "outcome": "passed",
             "figures": {
-                "entities": 19595,
+                "entities": 19599,
                 "min_entities": 17426
             }
         },
@@ -279,8 +279,8 @@
             "outcome": "passed",
             "figures": {
                 "entity_type": "individual",
-                "share_basis_points": 3858,
-                "previous_share_basis_points": 3854,
+                "share_basis_points": 3859,
+                "previous_share_basis_points": 3858,
                 "max_shift_points": 5,
                 "refuse_from": 10
             }
@@ -290,8 +290,8 @@
             "check": "data_as_of",
             "outcome": "passed",
             "figures": {
-                "data_as_of": "2026-11-19",
-                "previous": "2026-11-18"
+                "data_as_of": "2026-11-20",
+                "previous": "2026-11-19"
             }
         },
         {
@@ -393,7 +393,7 @@
             "check": "removals",
             "outcome": "passed",
             "figures": {
-                "removed": 0,
+                "removed": 1,
                 "previous_entities": 6449,
                 "max_share_basis_points": 50,
                 "refuse_from": 10
@@ -415,7 +415,7 @@
             "check": "minimum_entities",
             "outcome": "passed",
             "figures": {
-                "entities": 6449,
+                "entities": 6448,
                 "min_entities": 5705
             }
         },
@@ -424,9 +424,9 @@
             "check": "type_mix",
             "outcome": "passed",
             "figures": {
-                "entity_type": "individual",
-                "share_basis_points": 6311,
-                "previous_share_basis_points": 6311,
+                "entity_type": "vessel",
+                "share_basis_points": 1074,
+                "previous_share_basis_points": 1076,
                 "max_shift_points": 5,
                 "refuse_from": 10
             }
@@ -436,7 +436,7 @@
             "check": "data_as_of",
             "outcome": "passed",
             "figures": {
-                "data_as_of": "2026-11-17",
+                "data_as_of": "2026-11-20",
                 "previous": "2026-11-17"
             }
         },
@@ -477,7 +477,7 @@
             "check": "additions",
             "outcome": "passed",
             "figures": {
-                "added": 0,
+                "added": 34,
                 "previous_entities": 6269,
                 "max_share_basis_points": 500,
                 "refuse_from": 10
@@ -488,7 +488,7 @@
             "check": "minimum_entities",
             "outcome": "passed",
             "figures": {
-                "entities": 6269,
+                "entities": 6303,
                 "min_entities": 5609
             }
         },
@@ -498,7 +498,7 @@
             "outcome": "passed",
             "figures": {
                 "entity_type": "individual",
-                "share_basis_points": 7162,
+                "share_basis_points": 7148,
                 "previous_share_basis_points": 7162,
                 "max_shift_points": 5,
                 "refuse_from": 10
@@ -509,7 +509,7 @@
             "check": "data_as_of",
             "outcome": "passed",
             "figures": {
-                "data_as_of": "2026-10-23",
+                "data_as_of": "2026-11-20",
                 "previous": "2026-10-23"
             }
         },
